@@ -1,0 +1,21 @@
+\begin{tikzpicture}[->,>=stealth',auto,node distance=3cm,
+  thick,main node/.style={circle,draw,font=\sffamily\Large\bfseries}]
+  \node[] at (-2,1) {\huge (a)};
+\node[main node] (1) {};
+\node[main node] (2) [right of=1] {};
+\node[main node] (3) [right of=2] {};
+\node[main node] (4) [right of=3] {};
+
+\draw [->] (1) to [out=20, in=160] (2);
+\draw [->] (2) to [out=20, in=160] (3);
+\draw [->] (3) to [out=20, in=160] (4);
+\draw [->] (2) -- (1);
+\draw [->] (3) -- (2) ;
+\draw [->] (4) -- (3);
+\draw [->, red] (4) to [out=150,in=30] (1);
+\draw [->,red] (1.north) to [out=30,in=150] (4.north);
+\draw [->,red] (1) to [out=30,in=150, bend right=20] (3);
+\draw [->,red] (3.south) to [out=150,in=30, bend left = 20] (1.south);
+\draw [->,red] (2) to [out=30,in=150, bend right=20] (4);
+\draw [->,red] (4.south) to [out=150,in=30, bend left = 20] (2.south);
+\end{tikzpicture}

@@ -1,0 +1,49 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+%
+\begin{tikzpicture}
+%\node[] at (-2,7) {\huge (b)};
+
+\begin{axis}[%
+%width=4in,
+%height=4in,
+%at={(0in,0in)},
+scale only axis,
+xmin=0,
+xmax=1,
+xtick={0, 0.2, 0.4, 0.6, 0.8, 1},
+xlabel style={font=\Large\bfseries\color{white!15!black}},
+xlabel={Connectivity, 0=Grid},
+ymin=-2.5,
+ymax=0.5,
+yticklabel style = {font=\Large},
+ylabel style={font=\huge\bfseries\color{white!15!black}, at={(axis description cs:-0.15,0.5)}},
+scale ticks below exponent=2,
+ylabel={$\Theta$},
+axis background/.style={fill=white},
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1, line width=2.0pt, draw=none, mark=square, mark options={solid, mycolor1}]
+ plot [error bars/.cd, y dir = both, y explicit]
+ table[row sep=crcr, y error plus index=2, y error minus index=3]{%
+1	0.0158897932895343	0.0219638609519872	0.0219638609519872\\
+0	-2.19152922410445	0.0442727133533317	0.0442727133533317\\
+0.1	-1.26900238075602	0.113140127221996	0.113140127221996\\
+0.2	-1.13717407560137	0.105399483670646	0.105399483670646\\
+0.3	-1.00117652331271	0.088778703694582	0.088778703694582\\
+0.4	-0.860142584690047	0.0752706537627627	0.0752706537627627\\
+0.5	-0.726084325807173	0.0648688752958107	0.0648688752958107\\
+0.6	-0.588945001891375	0.0557394993663173	0.0557394993663173\\
+0.7	-0.444804928347819	0.0432954017554721	0.0432954017554721\\
+0.8	-0.287006316742788	0.0332660232213172	0.0332660232213172\\
+0.9	-0.132989953746229	0.0271438744901984	0.0271438744901984\\
+};
+
+\end{axis}
+
+\end{tikzpicture}%

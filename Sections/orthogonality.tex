@@ -1,0 +1,61 @@
+We consider systems whose dynamics are described by continuous time Markov chains.  System states and transitions can be represented as a fully connected directed graph (Figure 1(a)), and have dynamics represented by a matrix differential equation known as the Master equation
+\[
+\frac{d{p}}{dt} = \mL{p}
+\]
+where $\mL$ is a {\it Laplacian matrix} encoding the transition rates $k_{ij} = (j\to i)$ of the network in its off-diagonal elements, and having diagonal elements set such that all columns sum to zero:
+\[
+\mathcal{L}_{ij} =
+ \begin{cases}
+       {k_{ij}} & i\neq j, \ k_{ij}\ge0\\
+       {-\sum_j k_{ij}} & i=j,\\
+\end{cases}
+\]
+and ${p}$ is an $n$ dimensional vector representing the dynamic occupancy of the network states.
+
+We require our systems to be fully-connected\footnote{Fully-connected graphs are ones in which it is possible to (not necessary directly) get from every state to every other state}, which implies that they have a single unique steady state (Appendix \ref{app:orth}).  Let $\rho$ be the vector of {\it steady states} of the Master equation determined by solving $\mL \rho=0$.  The degree to which a network {\it discriminates} between state $i$ and $j$ is given by the ratio of corresponding steady state elements: $\rho_i/\rho_j.$
+
+In general, for systems both in and out of equilibrium, $\rho_i/\rho_j$ will be depend on transition rate parameters arbitrarily far from the discriminatory nodes $i, j.$  We aim to determine in which cases the ratio $\rho_i/\rho_j$ is more `local'.
+
+By considering the geometry of the steady-state solution space, we can compute that (Appendix \ref{app:orth}):
+\begin{equation}\label{ratio}
+\frac{\rho_i}{\rho_j} = \frac{\norm{v_i - \proj_\sij(v_i)}}{\norm{v_j - \proj_\sij(v_j)}}.
+\end{equation}
+where: $v_i$ represents the $i$th column of $\mL;$ $\proj_\sij(v_i)$ denotes the projection of vector $v_i$ onto the $n-2$ dimensional subspace spanned by the columns of $\mL$ remove $i,j.$
+
+In general, computing the subspace projections $\proj_\sij(v_i)$ will require orthogonalizing the columns of $\sij.$ From the perspective of Equation \ref{ratio}, this (recursive) orthogonalization procedure is the origin of global parametric complexity in $\rho_i/\rho_j$.
+
+In the special case where the vectors that span $\sij$ are orthogonal, $\sij_{\text{orth}}$, the Equation \ref{ratio} projections can be simply computed:
+\begin{equation}\label{proj}
+\proj_{\sij_{\text{orth}}}(v_i) = \sum_{l\in \sij}\langle v_i, v_l \rangle v_i.
+\end{equation}
+Graphically, $\la v_i, v_l \ra\neq 0$ only if the $i$th and $l$th nodes on the digraph associated with $\mL$ are directly linked or direct arrows at one or more mutual nodes.  Therefore, $\sij_{\text{orth}}$ corresponds to the case in which $\rho_i/\rho_j$ depends on only transition rates 0-2 connections away from the nodes $i,j.$  The matrix $\sij$ having orthogonal columns implies {\it local} discrimination between states $i$ and $j$.
+
+In practice, $\sij$ having purely orthogonal columns conflicts with our requirement that $\mL$ describe dynamics on a fully connected graph.  Distance of an $\sij$ matrix from the perfectly orthogonal case is the relevant quantity to consider.
+To that end, we compute the difference between the true projection of a vector $v$ onto $\sij,$ $\proj_\sij(v),$ and the projection assuming that $\sij$ is orthogonal, $\proj_{\sij_{\text{orth}}}(v),$
+\begin{equation}\label{orth_approx}
+\begin{aligned}
+&\norm{\proj_\sij(v) - \proj_{\sij_{\text{orth}}}(v)}\\
+&= \norm{\sij(\sij^T\sij)^{-1}\sij^Tv - \sij\sij^Tv} \\
+ &\le \norm{\sij(\sij^T\sij)^{-1}\sij^T - \sij\sij^T}\norm{v},\\
+& = \norm{\mathbf{I} - \sij^T\sij}\norm{v}
+\end{aligned}
+\end{equation}
+where the inequality is due to Cauchy-Schwartz and the final line is arrived at by simplifying the term in the first norm (Appendix \ref{app:proj}).
+
+We define {\it orthogonality} to capture this distance.
+
+\begin{defn}[Orthogonality]{We define the {\it orthogonality} of the discrimination between states $i$ and $j$ of network having Laplacian $\mL$ to be
+\[
+\Theta(\sij) = 1 - \norm{\mathbf{I} - \widehat{\sij}^T\widehat{\sij}}_F
+\]
+where $\norm{ \ }_F$ denotes the Frobenius norm and $\sij$ is a $(n \times n-2)$ matrix constructed by removing the columns corresponding to the $i,j$ discriminatory nodes from $\mL;$ and $\widehat{A}$ denotes the matrix $A$ having every column normalized to be of unit length.  Note that orthogonality is defined with respect to a network {\it and} two nodes of discriminatory interest.  We will use the term `discriminatory scheme,' to refer to this (network, nodes) pair and therefore refer to the `orthogonality of a scheme' leaving the specific discriminatory nodes $i,j$ implicit.
+}
+\end{defn}
+
+Orthogonality can be understood to capture the number of effective pathways directed towards the discriminatory nodes.  To illustrate this, we consider discriminating between the end nodes of a 4 node toy model (Figure \ref{fig:toy_model}(a)) having bidirectional connections equal to either $k$ or $l$ (black, red, arrows in \ref{fig:toy_model}(a), respectively).  As the ratio $r=k/l$ grows, the black path becomes singly dominant over the red paths.  Correspondingly, the orthogonality decreases (Figure \ref{fig:toy_model}(b)) as $\Theta \sim O(r^{-2})$ (Appendix \ref{app:4node}).
+
+Alternatively, we can ask: when does deleting the black links between the middle two nodes in Figure \ref{fig:toy_model}(a) affect orthogonality?  We find that when these arrows do not constitute part of a dominant path ($r\approx1$), deleting them has no effect on orthogonality.  But when these links {\it do} constitute part of a dominant path ($r>>1$), deleting them significantly increases orthogonality (Appendix \ref{app:4node}).
+
+\input{Figures/figure0}
+
+Our example demonstrates that an all-to-all connected discrimination scheme ($r=1$) with equal rates has greater orthogonality than a line topology $(r>>1)$ having equal rates ($k$), for $N=4$ nodes.  We can compute that this holds for all $N$ (Appendix \ref{app:line_v_all}).  The increased orthogonality of the all-to-all relative to line topology captures a more general fact: orthogonality tends to decrease as connections are removed from a discrimination scheme, so long as these connections are of equal order magnitude to remaining connections.  We demonstrate this computationally (Figure~\ref{sfig:orth}). 

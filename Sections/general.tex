@@ -1,0 +1,57 @@
+\input{Figures/figure3}
+Murugan, Huse, and Leibler recently discovered that energetic discrimination in a general network requires a {\it discriminatory fence}~\cite{Murugan2014}, which can be idealized as a ladder graph having two sides, each with $N$ loops (Figure \ref{fig:ladder}(a)).  The sides of the ladder are symmetric about the $0$ node; the network aims to discriminate between states represented by its upper corners (i.e., $x_{s2}$ in Figure \ref{fig:ladder}(a)).  Rate constants $u^S,\ d^S, \ S=\{W, R\}$ will differ for the `Wrong' ($W$) and `Right' ($R$) sides of the network.
+
+The ladder idealization captures the fact that a general energetic discrimination network must have dominant `forward' ($f$) and `reverse' ($b$) paths which are parallel to each other and effectively one-directional.  On the pathway towards the product state, there is the constant threat of `discard' ($d$), after which the reaction is exposed to a one-directional pathway away from the product state ($b$).  There is also the possibility of `rescue' ($u$) from discard. 
+
+The Kramer's form rate constants for this network are
+\begin{center}
+\begin{tabular}{ll}
+$u^R = \omega_d e^{\epsilon_u+\delta}$ & $d^R = \omega_d e^{\delta}$\\
+\\
+$u^W =  \omega_d e^{\epsilon_u} $&$ d^W = \omega_d e^{\gamma}$.\\
+\end{tabular}
+\end{center}
+And there is no discrimination ($f^R=f^W=f$) along the forward or reverse pathways:
+\[
+\begin{aligned}
+f = \omega_f & & b = \omega_b,\\
+\end{aligned}
+\]
+which we approximate to be one-directional for analytical convenience, but treat as bidirectional with small reverse rates when necessary for computing dissipation.
+
+It is clear from the Kramer's form constants that to discriminate in the energetic regime (i.e., via $\gamma$), a high discard rate ($d$) is required.  Indeed, the error rate for an $N$-loop network~\footnote{An $N$-loop network will strictly speaking be composed of $2N+1$ loops, $N$ on each side of the ladder and a single reactant node.} in this regime is 
+\begin{equation}\label{energy_error}
+\xi_{\text{energetic}} = \frac{1}{e^\gamma}\left (\frac{\omega_d+\omega_f}{\omega_d e^{\gamma}+\omega_f} \right )^N
+\end{equation}
+which achieves its minimum when discards are high relative to steps toward reaction completion:
+\begin{equation}\label{elim}
+\omega_d/\omega_f \to \infty.
+\end{equation}
+Discrimination in this regime is fundamentally processive, and global: accuracy relies on sequential exposure to frequently realized discard pathways, and {\it each} reaction step contributes to discrimination via the potential for discard.  Correspondingly, orthogonality monotonically decreases in the Equation \ref{elim} limit (Appendix \ref{app:ladder_error}), and is minimized in the high discard regime (Figure \ref{fig:ladder}(b), solid lines).
+
+In contrast, we find that the kinetic regime has error fraction given by  (Appendix~\ref{app:ladder_error}):
+\begin{equation}\label{general:kinetic_error}
+\xi_{\rm kinetic} =  \frac{(\phi+1)^\alpha(1+\eta e^\delta)^\alpha}{(\phi e^\delta+1)^\alpha(\eta+1)^\alpha}.
+\end{equation}
+where 
+\[
+\phi = \omega_d e^{\epsilon_u}/\omega_b, \ \ \ and \ \ \ \eta =\omega_d/ \omega_f.
+\]
+The error $\xi_{\text{kinetic}}$ is minimized when $\eta\to0$ and $\phi\to\infty$, which is to say that:
+\begin{equation}\label{kin_lad}
+\omega_d/\omega_f \to 0, \ \ \omega_de^{\epsilon_u}/\omega_b \to \infty.
+\end{equation}
+These limits imply that network dynamics are being pushed quickly towards the final product nodes ($\omega_f,\ \epsilon_u$ large, $\omega_b$ small).  This makes local discrimination possible; and indeed orthogonality is monotonically increasing in the Equation \ref{kin_lad} limit (Appendix \ref{app:ladder_orth}).
+
+Quick movement towards final product nodes is in opposition to high discard rates; we can thus summarize the difference between the energetic and kinetic regimes by observing their difference with respect to the discard rate ($d$, Figure \ref{fig:ladder}(b) x-axis), which reveal the expected orthogonality-error relationships in the two regimes.  Note that these limits correspond to the dynamical phase localization limits described in \cite{Murugan2016}.
+
+We are now in a position to understand the orthogonality of this model in terms of its effective pathways towards the final product nodes.  The energetic discrimination requirement that $f<<d$ means that the network effectively contains only a single pathway to the product.  Intuitively, the single pathway results from the slowness of one-directional progress towards the final product; rescue pathways cannot add additional paths to the final product because they are effectively equilibrated relative to the slow forward progress.  Corresponding to this intuition, we find analytically that $u, \ b,$ have essentially no effect on orthogonality in the $f<<d$ regime (Appendix \ref{app:ladder_orth}).  This argument is consistent with the fact that the discrimination error in the energetic regime (Equation \ref{energy_error}) is independent of $u, \ b,$ but in the kinetic regime, which requires $d<<f,$ we find that $u, b$ are important factors in the error expression (Equation \ref{general:kinetic_error}) and orthogonality requirements (Equation \ref{kin_lad}).
+
+In the energetic regime, we observe that as $f$ becomes close to $d$ (red tick, Figure \ref{fig:ladder}(c)), orthogonality rises sharply Figure \ref{fig:ladder}(c).  We understand this to result from many more effective pathways now leading to the final product.  Again, the rise in orthogonality as we increase $f$ leads to the non-monotonic behavior of the error rate.  
+
+Our understanding of orthogonality in terms of effective pathways allows us to apply thermodynamic drive in the energetic regime such that drive does {\it not} increase orthogonality.  Our arguments above state that $f << d,$ enforces the single pathway and hence orthogonal regime.  Therefore, if we dissipate energy to drive $d,$ we should find that the orthogonality decreases, and indeed we do (Figure \ref{fig:ladder}(d)).  Note that Figure \ref{fig:ladder}(c) was generated with the same parameters as Figure \ref{fig:ladder}(d); all that's changed is the reaction we choose to drive.  In this parametric limit, the orthogonality and dissipation requirements are not contravening.  
+
+\input{Figures/figure4}
+Finally, we note that (as in the Hopfield-Ninio regime) highly selective  - seven orders of magnitude - dissipation driven product switching is possible between states which are favored by different energy types (Figure \ref{fig:ladder_switch}).
+
+

@@ -1,0 +1,37 @@
+\section{Orthogonality in the 4-Node toy model}
+\label{app:4node}
+
+We will show how orthogonality changes as the graph in Figure \ref{fig:toy_model}(a) is modified, in support of the claims made in the main text.
+Because we are discriminating between the end nodes, the orthogonality of the scheme in Figure \ref{fig:toy_model}(a) is a function of a single (normalized) inner product:
+\begin{eqnarray*}\label{node:inner}
+\la v_2,v_3\ra^2 &=\frac{(2k(2k+l)-2kl)^2}{(2k^2+l^2+(2k+l)^2)^2}\\
+&=\frac{4 k^4}{\left(3 k^2+2 k l+l^2\right)^2}
+\end{eqnarray*}
+with $k, l$ corresponding to black, red arrows in Figure \ref{fig:toy_model}(a), as defined in the main text.
+
+We will first demonstrate how orthogonality changes as $r=k/l$ grows.  We then demonstrate how orthogonality changes upon removing the black (bidirectional) connection between the middle nodes.
+
+\paragraph{Adjusting rates to favor a single path reduces orthogonality}
+We can rewrite Equation \ref{node:inner} in terms of $r=k/l:$
+\[
+\la v_2,v_3\ra^2 =\frac{4 r^4}{\left(3 r^2+2 r+1\right)^2}.
+\]
+Two such terms contribute to the orthogonality giving
+\begin{eqnarray*}
+\Theta = &1-\sqrt{2 \la v_2,v_3\ra^2} \\
+=&1-\sqrt{\frac{8 r^4}{\left(3 r^2+2 r+1\right)^2}}
+\end{eqnarray*}
+which is decreasing with $r$ as $O(r^{-2}),$ as claimed in the main text.
+
+\paragraph{Removing a link}
+What happens to the orthogonality when we remove the black bidirectional links between the middle nodes?
+
+The expression for $\la v_2,v_3\ra^2_{\text{removed}}$ is given by
+\[
+\begin{aligned}
+\la v_2,v_3\ra^2_{removed} &=\frac{k^2 l^2}{\left(k^2+k l+l^2\right)^2}\\
+&= \frac{r^2}{\left(r^2+r+1\right)^2}
+\end{aligned}
+\] 
+When $r\approx1$ this expression is equal to Equation \ref{node:inner}; there is no affect on orthogonality. However, as $r$ increases, $\la v_2,v_3\ra^2_{\text{removed}}$ becomes smaller than Equation \ref{node:inner}; deleting the connections increases orthogonality. 
+We conclude that when $r>1$, the black bidirectional links form part of the dominant path, removing them will therefore increase the orthogonality.  

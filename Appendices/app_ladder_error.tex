@@ -1,0 +1,124 @@
+\section{Expressions for Error Rate in the Ladder Graph}
+\label{app:ladder_error}
+We wish to derive expressions for the error rate of the ladder discrimination scheme in the kinetic and energetic regimes.
+
+A single side of the ladder has structure:
+\begin{center}
+\schemestart
+0 \arrow(0--$y_{s0}$){<=>[$\mathrm{k_{on}}$][$\mathrm{k_{off}}$]}[,,,red] $y_{s0}$
+\arrow{<=>[$u$][$d$]}[90,,,red] 
+$x_{s0}$ \arrow($x_{s0}$--$x_{s1}$){->[$f$]}[,,,red]$x_{s1}$
+\arrow(@$y_{s0}$--$y_{s1}$){<-[][$b$]}[,,,red] $y_{s1}$ \arrow{<=>[$u$][$d$]}[90,,,red]
+\arrow(@$y_{s1}$--$y_{s2}$){<-[][$b$]}[,,,red] $y_{s2}$
+\arrow{<=>[$u$][$d$]}[90,,,red] 
+\arrow(@$x_{s1}$--$x_{s2}$){->[$f$]}[,,,red] $x_{s2}$
+\schemestop
+\end{center}
+where we have dropped the superscripts $d^S, \ u^S$ for clarity.
+
+We will use the Matrix-Tree theorem (MTT), which provides an expression for steady states in terms of {\it spanning trees}~\cite{Wong2018}.  Recall that a {\it spanning tree} of a graph $G$ is is a subgraph which: includes every vertex of $G$ and has no cycles (when edge directions ignored).  A spanning tree is said to be {\it rooted} at node $i$ if $i$ is the only vertex of the subgraph without any outgoing edges.
+
+The MTT provides an expression for the steady states of node $i$ in terms of the sum of the product of the rates of each spanning tree rooted at $i$.  That is:
+\[
+\rho_i = \sum_{T\in S_i(G) }\left(\prod_{j\stackrel{a}{\to} k\in T}a \right),
+\]
+where $S_i(G)$ is the set of all spanning trees of graph $G$ rooted at $i$.
+
+We will exploit the structure of our ladder network in order to simplify this expression.  Our ladder consists of two subgraphs (call them $G_R, \ G_W,$ corresponding to right, wrong products, respectively).  These two subgraphs are joined at a single node, $0.$  Because the subgraphs share a single node, the kernel element corresponding to node $i$ in subgraph $R$ is given by $\rho_i = \rho(G_R)\rho_0(G_W)$~\cite{Wong2018}.
+
+This gives for the error
+\begin{equation}\label{jer_span}
+\xi = \frac{\rho_W}{\rho_R} = \frac{\rho_W(G_W)\rho_0(G_R)}{\rho_R(G_R)\rho_0(G_W)}.
+\end{equation}
+
+We know that $\rho_S(G_S)$ $(\{S=W,R\})$ in Equation \ref{jer_span} represents the node at the top corner of the graph.  Similarly, $\rho_0(G_S)$ represents the node 0. 
+
+We therefore need only determine analytical expressions for the sums of (products of rate constants of) spanning trees rooted at the top corner and 0 nodes. 
+
+Let's count the trees rooted at $\rho_0(G_S)$ first.  In order for the tree to be rooted at $0$, there are a number of essential arrows:
+
+\bigskip
+
+\begin{center}
+\schemestart
+0 \arrow(0--$y_{s0}$){<-[][$\mathrm{k_{off}}$]}[,,,red] $y_{s0}$
+\arrow{<=>[$u$][$d$]}[90,,,white] 
+$x_{s0}$ \arrow($x_{s0}$--$x_{s1}$){->[$f$]}[,,,white]$x_{s1}$
+\arrow(@$y_{s0}$--$y_{s1}$){<-[][$b$]}[,,,red] $y_{s1}$ \arrow{<=>[$u$][$d$]}[90,,,white]
+\arrow(@$y_{s1}$--$y_{s2}$){<-[][$b$]}[,,,red] $y_{s2}$
+\arrow{<-[][$d$]}[90,,,red] 
+\arrow(@$x_{s1}$--$x_{s2}$){->[$f$]}[,,,white] $x_{s2}$
+\schemestop
+\end{center}
+without any of which it is impossible to produce a spanning tree rooted at $0.$  The necessity of these arrows comes from the unidirectionality of the $f, b.$
+
+What other arrows are necessary for a spanning tree?  Consider the diagram
+
+\begin{center}
+\schemestart
+0 \arrow(0--$y_{s0}$){<-[][$\mathrm{k_{off}}$]}[,,,red] $y_{s0}$
+\arrow{<-[][$d$]}[90,,dashed,green] 
+$x_{s0}$ \arrow($x_{s0}$--$x_{s1}$){->[$f$]}[,,,green]$x_{s1}$
+\arrow(@$y_{s0}$--$y_{s1}$){<-[][$b$]}[,,,red] $y_{s1}$ \arrow{<-[][$d$]}[90,,dashed,blue]
+\arrow(@$y_{s1}$--$y_{s2}$){<-[][$b$]}[,,,red] $y_{s2}$
+\arrow{<-[][$d$]}[90,,,red] 
+\arrow(@$x_{s1}$--$x_{s2}$){->[$f$]}[,,,blue] $x_{s2}$
+\schemestop
+\end{center}
+
+It is necessary and sufficient for a spanning tree rooted at $0$ to contain all of the red arrows, and exactly one of the green arrows and one of the blue arrows.  This holds in general; each loop in a ladder must contribute either a factor of $f$ or $d$ to a spanning tree rooted at 0.
+
+We can thus count the number of possible spanning trees, and the product of their rate constants
+\[
+\begin{aligned}
+\rho_0(G_S) &= k_{\rm off}b^\alpha d \sum_{k=0}^\alpha {\alpha\choose k}f^{\alpha-k}d^k\\
+&=k_{\rm off}b^\alpha d (f + d)^\alpha
+\end{aligned}
+\]
+where the second line follows from the Binomial theorem, and where we have set the number of square loops in the ladder portion of the graph to be $\alpha.$
+
+We can now repeat this procedure with spanning trees rooted in the upper corner, with red, blue, and green as before:
+
+\begin{center}
+\schemestart
+0 \arrow(0--$y_{s0}$){->[$\mathrm{k_{on}}$][]}[,,,red] $y_{s0}$
+\arrow{->[$u$][$$]}[90,,,red] 
+$x_{s0}$ \arrow($x_{s0}$--$x_{s1}$){->[$f$]}[,,,red]$x_{s1}$
+\arrow(@$y_{s0}$--$y_{s1}$){<-[][$b$]}[,,dashed,green] $y_{s1}$ \arrow{->[$u$][$$]}[90,,dashed,green]
+\arrow(@$y_{s1}$--$y_{s2}$){<-[][$b$]}[,,dashed,blue] $y_{s2}$
+\arrow{->[$u$][$$]}[90,,dashed,blue] 
+\arrow(@$x_{s1}$--$x_{s2}$){->[$f$]}[,,,red] $x_{s2}$
+\schemestop
+\end{center}
+
+
+Which gives us:
+\[
+\begin{aligned}
+\rho_S(G_S) &= k_{\rm on}f^\alpha u \sum_{k=0}^\alpha {\alpha\choose k}b^{\alpha-k}u^k\\
+&=k_{\rm on}f^\alpha u (b + u)^\alpha.
+\end{aligned}
+\]
+Note that in comparison to the last expression, we have merely made the substitutions: $b\to f, \ f \to b, \ d \to u, \  u \to d.$  Plus $k_{\rm off}\to k_{\rm on},$ of course.
+
+Returning to our expression for the error gives
+\[
+\begin{aligned}
+\xi &= \frac{\rho_W}{\rho_R} = \frac{\rho_W(G_W)\rho_0(G_R)}{\rho_R(G_R)\rho_0(G_W)}\\
+&= \frac{k_{\rm on}k_{\rm off}\  f_W^\alpha \ u_W \ b_R^\alpha \  d_R \  (u_W + b_W)^\alpha(f_R+d_R)^\alpha }{k_{\rm on}k_{\rm off}\  f_R^\alpha \ u_R \ b_W^\alpha \  d_W \  (u_R + b_R)^\alpha(f_W+d_W)^\alpha }
+\end{aligned}
+\]
+where we have denoted variables coming from the `right' and `wrong' sides of the ladder with subscripts $R$ and $W,$ respectively.  We can do some cancellation (b = $b_R$ = $b_W$ and $f = f_R = f_W$) to arrive at:
+\[
+\xi = \frac{d_Ru_W(u_W+b)^{\alpha}(f+d_R)^\alpha}{d_Wu_R(u_R+b)^{\alpha}(f+d_W)^\alpha}.
+\]
+In the energetic regime we have that $u_R = u_W,$ and that $d_W = d_Re^\gamma:$
+\[
+\xi_{\rm energetic} = \frac{(f+d_R)^\alpha}{e^\gamma(f+d_Re^\gamma)^\alpha}.
+\]
+%
+In the kinetic regime, we have that $d_R = d_We^\delta, \ u_R = u_We^\delta,$ giving 
+%
+\[
+\xi_{\rm kinetic} =  \frac{(u+b)^\alpha(f+de^\delta)^\alpha}{(ue^\delta+b)^\alpha(f+d)^\alpha}.
+\]

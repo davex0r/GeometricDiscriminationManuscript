@@ -1,0 +1,72 @@
+\section{Orthogonality of the line versus all-to-all graph}
+\label{app:line_v_all}
+In this Appendix we demonstrate that the orthogonality of an $N$ node line graph is strictly less than an $N$ node all-to-all connected graph, in the toy case where all rate constants are the same.  The result follows from directly calculating the orthogonality for each topology, which we do in turn.
+
+\begin{prop}[$\Theta$ for a line graph]{For a a line graph with bidrectional connections of equal weight (set to 1 without loss of generality), the orthogonality is given by: $\Theta  = 1 - \sqrt{(N-1)\frac{8}{9}+\frac{1}{36}(N-4)}$. 
+}
+\end{prop}
+\begin{proof}
+The result follows from direct computation of $\la i, \ j\ra, \ \forall \  i\neq 1,N.$
+There are only two types of nonzero $\la i,j \ra.$  The first type is $\la i, i+1 \ra;$ there exist $2(N-1)$ terms of this type.  The second type is $\la i,i+2 \ra;$ there exist $N-4$ entries of this type.  The first type of nonzero term represents `neighbors.'  The second represents nodes separated by one node, which point at a mutual node.  The two types of inner product have (squared, normalized) values:
+\[
+\la i, i+1 \ra^2 = \frac{(-\alpha\cdot2\alpha-\alpha\cdot 2\alpha)^2}{(2\alpha^2+4\alpha^2)^2} = \frac{4}{9}
+\]
+and
+\[
+\la i, i+2 \ra^2 = \frac{(\alpha^2)^2}{(6\alpha^2)^2} = \frac{1}{36}.
+\]
+The result follows.
+\end{proof}
+
+The all-to-all calculation is slightly more complicated.
+
+\begin{prop}[$\Theta$ for an all-to-all graph]{For an all-to-all connected graph with bidrectional connections of equal weight (set to 1 without loss of generality), the orthogonality is given by: $\Theta  = 1 - \sqrt{ \frac{(N-2)(N-3)}{(N-1)^2}}$. 
+}
+\end{prop}
+\begin{proof}
+Let $S$ be the $n$ by $n-2$ matrix formed by removing two of the columns of the Laplacian for this graph.
+
+Because the diagonal elements $(S^TS)_{ii} = 1,$ we need only compute the off-diagonal elements of $S^TS.$  A generic such element resulting from taking the (not normalized) inner product of columns $j, k$ is given by
+\[
+\begin{aligned}
+\langle j, k \rangle &= \sum_{\tristack{i}{i \neq j}{i\neq k}}\theta_{ij}\theta_{ik} - \theta_{jk}\cdot\sum_{\sumstack{i}{i\neq j}} \theta_{ij} - \theta_{kj}\sum_{\sumstack{i}{i\neq k}} \theta_{ik}\\
+& = (N-2)\alpha^2-\alpha^2(N-1)-\alpha^2(N-1)\\
+&=-\alpha^2N.\\
+\end{aligned}
+\]
+where the first line is a generic expression for the inner product of columns corresponding to connected nodes for matrix elements $\theta_{ij}$ of $S$, and the resulting lines follow from bidirectional all-to-all connectivity with equal rate constants.
+
+We now need to compute the normalization factor:
+\[
+\begin{aligned}
+\left(\norm{j}\norm{k}\right)^2 =& 
+\left(\sum_{\eyej}\theta^2_{ij} + \left(\sum_{\eyej}\theta_{ij}\right)^2\right)\\
+&\cdot \left(\sum_{\eyek}\theta^2_{ik} + \left(\sum_{\eyek}\theta_{ik}\right)^2\right)\\
+&= \left(\alpha^2(N-1) + (N-1)^2\alpha^2\right)^2\\
+&= \left(\alpha^2(N^2-N)\right)^2\\
+& = \alpha^4(N^2-N)^2
+\end{aligned}
+\]
+where again we have begun with generic terms for the normalization of the inner product of columns of the Laplacian matrix, with  $\theta_{ij}$ representing the elements of $S$.
+
+Putting these together yields the expression for a generic element of $S^TS$:
+\[
+\begin{aligned}
+\frac{\langle j, k \rangle^2}{\left(\norm{i}\norm{j}\right)^2} &= \frac{\alpha^4N^2}{\alpha^4(N^2-N)^2}\\
+& = \frac{1}{(N-1)^2}.
+\end{aligned}
+\]
+How many such elements exist?  We know that $S^TS$ is a square $n-2$ length matrix, and we know that the diagonal terms are zero.  We therefore have $(n-2)(n-3)$ entries each equal to $\frac{1}{(N-1)^2}.$  The result follows.
+\end{proof}
+
+From the two propositions we can calculate that
+\[
+\begin{aligned}
+\Theta_{\text{all-to-all}} - \Theta_{\text{line}} =&
+-\sqrt{ \frac{(N-2)(N-3)}{(N-1)^2}} \\
+&+\sqrt{(N-1)\frac{8}{9}+\frac{1}{36}(N-4)}
+\end{aligned}
+\]
+
+The former (negative) term quickly asymtotes to 1, whereas the latter (positive) term grows as $O(\sqrt{N}).$  We conclude that the orthogonality of the all-to-all graph is greater than the line graph, and this difference is increasing for increasing $N$.
+

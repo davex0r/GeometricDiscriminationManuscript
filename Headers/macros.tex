@@ -1,0 +1,139 @@
+% Macros file for Math 311 TeX files
+
+
+
+\newcommand\Q{{\mathbf Q}}
+\newcommand\R{{\mathbf R}}
+\newcommand\C{{\mathbf C}}
+\newcommand\T{{\mathbf T}}
+\newcommand\Z{{\mathbf Z}}
+\newcommand\N{{\mathbf N}}
+\newcommand\UHP{{\mathcal H}}
+\newcommand\Proj{{\mathbf P}}
+\newcommand\Rsphere{{\widehat{\mathbf C}}}
+\newcommand\lra{\longrightarrow}
+\newcommand\lreq{\overset\sim\lra}
+\newcommand\normal{\lhd}
+\newcommand\Adj{\text{Adj}}
+\newcommand\Aut{\text{Aut}}
+\newcommand\Id{\text{Id}}
+\newcommand\Ad{\text{Ad}}
+\newcommand\ad{\text{ad}}
+\newcommand\End{\text{End}}
+\newcommand\g{{\mathfrak{g}}}
+\newcommand\p{\mathbf p}
+\newcommand\pdr{{p_d^R}}
+\newcommand\pdw{{p_d^W}}
+\newcommand\pu{{p_u}}
+\newcommand\pb{{p_b}}
+\newcommand\pd{{p_d}}
+\newcommand\ppd{{\bar{p}_d}}
+\newcommand\ppdw{{\bar{p}_d^W}}
+\newcommand\ppdr{{\bar{p}_d^R}}
+
+
+\newcommand\om{\omega}
+
+\newcommand\hu{\hat{u}}
+
+\newcommand\E{\mathbb{E}}
+
+
+\newcommand\all{\forall}
+\newcommand\F{\mathbb{F}}
+
+\newcommand\e{\epsilon}
+
+\newcommand\x{\mathbf x}
+\newcommand\bu{\mathbf \mu}
+\newcommand\y{\mathbf y}
+
+
+
+\newcommand\Si{\Sigma}
+
+\renewcommand{\Re}[1]{{\rm Re}\left(#1\right)}
+\renewcommand{\Im}[1]{{\rm Im}\left(#1\right)}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{prob}[thm]{Problem}
+\newtheorem{assum}[thm]{Assumption}
+\newtheorem{result}[thm]{Result}
+
+
+\theoremstyle{definition}
+\newtheorem{remk}[thm]{Remark}
+\newtheorem{fact}[thm]{Fact}
+
+\theoremstyle{remark}
+\newtheorem{ex}[thm]{Example}
+
+\newcommand\cmat[4]{\left[\begin{array}{cc}#1&#2\\#3&#4\end{array}\right]}
+\newcommand\rmat[4]{\left[\begin{array}{rr}#1&#2\\#3&#4\end{array}\right]}
+
+\newcommand\cvec[2]{\left[\begin{array}{c}#1 \\ #2\end{array}\right]}
+
+\newcommand\sumstack[2]{
+\substack{
+#1\\
+#2}
+}
+
+\newcommand\tristack[3]{
+\substack{
+#1\\
+#2\\
+#3}
+}
+
+\newcommand\quadstack[4]{
+\substack{
+#1\\
+#2\\
+#3\\
+#4}
+}
+
+\newcommand\eyej{
+\substack{
+i\\
+i\neq j}
+}
+
+\newcommand\eyek{
+\substack{
+i\\
+i\neq k}
+}
+
+
+%\newcommand\ol{\overline}
+
+\include{xy}
+\xyoption{all}
+\SelectTips{cm}{}
+\CompileMatrices
+
+\include{epsf}
+\newcommand{\graphillus}[3]{\epsfysize=#1truein
+\vbox{\centerline{\epsffile{#2.eps}}\caption{#3}}}
+
+\newcommand{\specialillus}[4]{\epsfysize=#1in
+	\vbox{\centerline{\epsffile{#2.eps}}
+		\kern -#1in \kern-1bp
+                \epsfysize=#1in
+		\centerline{\epsffile{#3.eps}}
+		\kern1bp
+		\caption{#4}}
+	}
+
+
+
+
+
+

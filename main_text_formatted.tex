@@ -1,0 +1,44 @@
+\documentclass[reprint,amsmath,amssymb,aps,prx,superscriptaddress]{revtex4-2}
+
+\usepackage{graphicx} % remove 'demo' option in real document
+%\usepackage{times}
+\usepackage{caption}
+\captionsetup{justification   = raggedright,
+              singlelinecheck = false}
+              
+
+
+\input{Headers/figure_header}
+\input{Headers/packages}
+\input{Headers/macros}
+\input{Headers/commands}
+
+\begin{document}
+
+\input{Sections/title}
+\section{Introduction}
+\input{Sections/introduction}
+\section{Definition of Orthogonality}
+\input{Sections/orthogonality}
+\section{Orthogonality in the Hopfield-Ninio Scheme}
+\input{Sections/hopfield}
+\section{Orthogonality in a general setting}
+\input{Sections/general}
+\section{Discussion}
+\input{Sections/discussion}
+\input{Sections/acknowledgements}
+\bibliography{References/references.bib}
+\bibliographystyle{plain}
+
+\appendix
+\appendixpage
+\input{Appendices/app_orthogonality}
+\input{Appendices/app_proj}
+\input{Appendices/app_linevall}
+\input{Appendices/app_4node}
+\input{Appendices/app_hopfield}
+\input{Appendices/app_ladder_error}
+\input{Appendices/app_ladder_orth}
+\input{Supplement/supplement}
+
+\end{document}

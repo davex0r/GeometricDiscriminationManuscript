@@ -1,0 +1,337 @@
+\section{Error and Orthogonality in Ninio-Hopfield Model}
+\label{app:hopfield}
+We first consider the Hopfield model in the energetic regime.  The Laplacian for this scheme with the columns corresponding to final products removed is given by
+\[ 
+A = \left(\begin{array}{ccc}
+-\sum_1 & \oom e^\gam & \oom \\
+\oom e^\eps & -\sum_2 & 0 \\
+\oom e^\eps & 0 & -\sum_3 \\
+\wpp & m' & 0 \\
+\wpp & 0 & m' \\
+\end{array}\right).
+\]
+
+Orthogonality in this model will be a function of three inner products:
+\[
+\Theta = 1-\sqrt{2*(s^2_{1,2} +s^2_{1,3} +s^2_{2,3} )}
+\]
+where we have denoted the (normalized) inner product of the $i$th and $j$th elements of $A$ as $s_{i,j}.$  It will be useful to define and reason about
+\[
+\sum{s^2_{i,j}}= (s^2_{1,2} +s^2_{1,3} +s^2_{2,3} ).
+\]
+
+The relevant inner products are
+\begin{widetext}
+\begin{eqnarray*}
+s^2_{1,2} = \frac{\la 1,2 \ra^2}{\left(\norm{1}\norm{2}\right)^2}&=&\frac{(3e^\eps \oom^2 + 2\oom \wpp + e^\eps \oom m' - \wpp m')^2}
+{4(3e^{2\eps}\oom^2+ 4 e^\eps\wpp \oom + 3 \wpp)(\oom^2 + \oom m' + m'^2)}\\
+s^2_{1,3} = \frac{\la 1,3 \ra^2}{\left(\norm{1}\norm{3}\right)^2}&=&\frac{(3e^{\eps+\gamma} \oom^2 + 2\oom \wpp e^{\gamma} + e^\eps \oom m' - \wpp m')^2}{4(3e^{2\eps}\oom^2+ 4 e^\eps\wpp \oom + 3 \wpp)(\oom^2e^{2\gamma} + \oom m' e^{\gamma}+ m'^2)}\\
+s^2_{2,3} = \frac{\la 2,3\ra^2}{\left(\norm{2}\norm{3}\right)^2}&=&\frac{\oom^4 e^{2\gam}}{4(\oom^2+\oom m' + m'^2)(e^{2\gam}\oom^2+e^\gam \oom m' + m'^2)}.\\
+\end{eqnarray*}
+\end{widetext}
+
+We now demonstrate the orthogonality-discrimination relations made in the main text.   To do so, we first compute the orthogonality in the high and low discrimination limits, in order to demonstrate that orthogonality is lower ($\sum{s^2_{i,j}}$ higher) as high discrimination improves.  We will then compute the degree to which orthogonality movement between the low and high discrimination limits is monotonic.
+
+In the energetic regime, the discrimination is maximized in the limits
+\[\frac{\omega_p}{\omega e^{\epsilon}}\to0\].
+We must therefore consider: $\omega\to\infty$,$\epsilon\to\infty$, and $\omega_p\to0.$
+
+%Lets compute the value of this sum in the appropriate limits.  Recall that these limits are those in which,
+%\[\frac{\omega_p}{\omega e^{\epsilon}}\to0\]
+%
+%First we will consider only the energetic regime, $\gamma>0,\delta=0$.  
+%
+%The proofreading limits for the energetic regime (see main text) are $\omega_p\to0$ and $w,\epsilon \to \infty$.
+%
+%%Taking the proofreading limits as before we would like to show that the orthogonality is decreasing monotonically as we approach these limits.  To do this we will prove that the values in in these limits are lower than the values away from these limits, and that the derivative of the orthogonality is negative.  
+%
+%The proofreading limits for the energetic regime are $\omega_p\to0$ and $w,\epsilon \to \infty$.  
+%
+%%First we will derive the full analytic expression for the orthogonality in the energetic regime.  There are three different off-diagonal elements in the $S^TS$ matrix and they are given as using Kramer's form rate constants:
+%\begin{widetext}
+%\begin{eqnarray*}
+%s^2_{1,2} = \frac{\la 1,2 \ra^2}{\left(\norm{1}\norm{2}\right)^2}&=&\frac{(3e^\eps \oom^2 + 2\oom \wpp + e^\eps \oom m' - \wpp m')^2}
+%{4(3e^{2\eps}\oom^2+ 4 e^\eps\wpp \oom + 3 \wpp)(\oom^2 + \oom m' + m'^2)}\\
+%s^2_{1,3} = \frac{\la 1,3 \ra^2}{\left(\norm{1}\norm{3}\right)^2}&=&\frac{(3e^{\eps+\gamma} \oom^2 + 2\oom \wpp e^{\gamma} + e^\eps \oom m' - \wpp m')^2}{4(3e^{2\eps}\oom^2+ 4 e^\eps\wpp \oom + 3 \wpp)(\oom^2e^{2\gamma} + \oom m' e^{\gamma}+ m'^2)}\\
+%s^2_{2,3} = \frac{\la 2,3\ra^2}{\left(\norm{2}\norm{3}\right)^2}&=&\frac{\oom^4 e^{2\gam}}{4(\oom^2+\oom m' + m'^2)(e^{2\gam}\oom^2+e^\gam \oom m' + m'^2)}\\
+%\end{eqnarray*}
+%\end{widetext}
+%
+%The orthogonality is then given as
+%\[
+%\Theta = 1-\sqrt{2*(s^2_{1,2} +s^2_{1,3} +s^2_{2,3} )}
+%\]
+%lets define the sum,
+%\[
+%\sum{s^2_{i,j}}= (s^2_{1,2} +s^2_{1,3} +s^2_{2,3} )
+%\]
+%Lets compute the value of this sum in the appropriate limits.  Recall that these limits are those in which,
+%\[\frac{\omega_p}{\omega e^{\epsilon}}\to0\]
+%which gives us 3 limits, $\omega\to\infty$,$\epsilon\to\infty$, and $\omega_p\to0$
+\paragraph{Energetic Limit 1: $\omega\to\infty$}
+%In the energetic regime, we want to prove $\Theta$ decreases as accuracy increases.  For $\omega$, accuracy increases as $\omega$ goes from $0\to\infty$. Thus if, $\Theta$ decreases as  $\omega\to\infty$ we need to prove that $\sum{s^2_{i,j}}$ is increasing with increasing $\omega$ and that this increase is monotonic (note we have replace $m'$ with $\mu$).
+
+Note that we replace $m'$ with $\mu$ in the below.
+
+\subparagraph{$\sum{s^2_{i,j}}$ is increasing with $\omega$} To demonstrate this, we will show the following.  
+\[
+\lim_{\omega\to\infty}\sum{s^2_{i,j}}>\lim_{\omega\to0}\sum{s^2_{i,j}}
+\]
+Analytically, we can see that the in the limit of $\omega\to\infty$, only terms of order $\omega^4$ remain.  If we expand and collect the terms together in $\omega$
+\begin{widetext}
+\begin{eqnarray*}
+s^2_{1,2}&=\frac{9 w^4 e^{2 \epsilon }+w^3 \left(12 \omega_p e^{\epsilon }+6 \mu  e^{2 \epsilon }\right)+w^2 \left(4 \omega_p^2-2 \mu  \omega_p e^{\epsilon }+\mu ^2 e^{2 \epsilon }\right)+w \left(-4 \mu  \omega_p^2-2 \mu ^2 \omega_p e^{\epsilon }\right)+\mu ^2 \omega_p^2}{12 w^4 e^{2 \epsilon }+w^3 \left(16 \omega_p e^{\epsilon }+12 \mu  e^{2 \epsilon }\right)+w^2 \left(12 \omega_p^2+16 \mu  \omega_p e^{\epsilon }+12 \mu ^2 e^{2 \epsilon }\right)+w \left(12 \mu  \omega_p^2+16 \mu ^2 \omega_p e^{\epsilon }\right)+12 \mu ^2 \omega_p^2}\\
+s^2_{1,3}&=\frac{9 w^4 e^{2 \gamma +2 \epsilon }+w^3 \left(6 \mu  e^{\gamma +2 \epsilon }+12 e^{\gamma +\epsilon }\omega_p e^{\gamma }\right)+w^2 \left(-6 \mu  \omega_p e^{\gamma +\epsilon }+4\omega_p e^{2 \gamma }+4 \mu  e^{\epsilon }\omega_p e^{\gamma }+\mu ^2 e^{2 \epsilon }\right)+w \left(-4 \mu  \omega_p\omega_p e^{\gamma }-2 \mu ^2 \omega_p e^{\epsilon }\right)+\mu ^2 \omega_p^2}{12 w^4 e^{2 \gamma +2 \epsilon }+w^3 \left(12 e^{2 \epsilon } \text{$\mu $e}^{\gamma }+16 \omega_p e^{2 \gamma +\epsilon }\right)+w^2 \left(12 e^{2 \gamma } \omega_p^2+16 \omega_p e^{\epsilon } \text{$\mu $e}^{\gamma }+12 \mu ^2 e^{2 \epsilon }\right)+w \left(12 \omega_p^2 \text{$\mu $e}^{\gamma }+16 \mu ^2 \omega_p e^{\epsilon }\right)+12 \mu ^2 \omega_p^2}\\
+s^2_{2,3}&=\frac{\oom^4 e^{2\gam}}{4 e^{2 \gamma } w^4+w^3 \left(4 e^{\gamma } \mu +4 e^{2 \gamma } \mu \right)+w^2 \left(4 e^{\gamma } \mu ^2+4 e^{2 \gamma } \mu ^2+4 \mu ^2\right)+w \left(4 e^{\gamma } \mu ^3+4 \mu ^3\right)+4 \mu ^4}
+\end{eqnarray*}
+\end{widetext}
+Thus, in the limit  $\omega\to\infty$,% this sum becomes
+\[
+\lim_{\omega\to\infty}\sum{s^2_{i,j}} = \frac{9e^{2\epsilon}}{12e^{2\epsilon}}+\frac{9e^{2\epsilon+2\gamma}}{12e^{2\epsilon+2\gamma}}+\frac{e^{2\gamma}}{4e^{2\gamma}}=\frac{7}{4}
+\]
+in the limit  $\omega\to0$, only the constant terms (those not multiplied by $\omega$) remain.  We therefore have %Then the sum becomes
+\[
+\lim_{\omega\to0}\sum{s^2_{i,j}} = \frac{\mu^2 \omega_p^2}{12\mu^2 \omega_p^2}+\frac{\mu^2 \omega_p^2}{12\mu^2 \omega_p^2}+0=\frac{1}{6}
+\]
+This gives the desired result:
+\[
+\lim_{\omega\to\infty}\sum{s^2_{i,j}}=\frac{7}{4}>\lim_{\omega\to0}\sum{s^2_{i,j}}=\frac{1}{6} \ \ \ .
+\]
+%Putting these sums back into the equation for orthogonality we can verify that orthogonality is decreasing in the proofreading limit
+%\begin{eqnarray*}
+%\lim_{\omega\to0}\Theta=&1-\sqrt{2\frac{1}{6}}=0.4226\\
+%>&\lim_{\omega\to\infty}\Theta=1-\sqrt{2\frac{7}{4}}=-0.8708
+%\end{eqnarray*}
+\subparagraph{The increase in $\sum{s^2_{i,j}}$ in monotonic}
+To demonstrate that the increase in  $\sum{s^2_{i,j}}$ is monotonic in $\omega$ we must show that 
+\[
+\frac{d}{d\omega}\sum{s^2_{i,j}}>0
+\]
+We will compute the derivatives of each of the components separately.  The easiest is the $s^2_{2,3}$ term.%, let's start with this one, the derivative of this term is given as,
+\begin{widetext}
+\[
+\frac{d}{d\omega}{s^2_{2,3}}=\frac{e^{2 \gamma } \mu  w^3 \left(e^{\gamma } w \left(3 \mu ^2+w^2+2 \mu  w\right)+e^{2 \gamma } w^2 (2 \mu +w)+\mu  \left(4 \mu ^2+2 w^2+3 \mu  w\right)\right)}{4 \left(\mu ^2+w^2+\mu  w\right)^2 \left(\mu ^2+e^{2 \gamma } w^2+e^{\gamma } \mu  w\right)^2}
+\]
+\end{widetext}
+which is greater than zero because all rate constants are positive.  This is the desired result.
+
+Now lets turn to the other two terms.  It is sufficient to consider the numerator of the derivatives of $\sum{s^2_{1,j}}$
+\begin{widetext}
+\[
+\begin{aligned}
+\frac{d}{d\omega}{s^2_{1,j}} &= 4 (e^\eps \oom (m'+3 \oom)-\wpp (m'-2 \oom)) [e^\eps \wpp^2 (10 m'^3+55 m'^2 \oom+39 m' \oom^2+10\oom^3)\\
+   &+ e^{2 \eps} \wpp m' \oom (10 m'^2+45 m' \oom+26 \oom^2)+3 e^{3 \eps} m' \oom^3 (5 m'+\oom)+3
+   \wpp^3 m' (5 m'+4 \oom)].
+\end{aligned}
+\]
+\end{widetext}
+
+This term is positive except for the case
+\[
+\begin{aligned}
+\wpp m' &> \wpp 2\oom + e^\eps \oom m' + 2 e^\eps \oom\\
+1 &> \frac{2\oom}{m'} + \frac{e^\eps\oom}{\wpp} + \frac{2e^\epsilon\oom^2}{\wpp m'}
+\end{aligned}
+\]
+which is only satisfied outside of the proofreading regime $\frac{\wpp}{e^\epsilon\oom} > 1.$
+
+\paragraph{Energetic Limit 2: $\epsilon\to\infty$}
+\subparagraph{$\sum{s^2_{i,j}}$ is increasing with $\epsilon$} To demonstrate this, we will show the following.  
+\[
+\lim_{\epsilon\to\infty}\sum{s^2_{i,j}}>\lim_{\epsilon\to-\infty}\sum{s^2_{i,j}}
+\]
+First note that the term $s^2_{2,3}$ is not a function of $\epsilon$.  If we rearrange the other two $s^2_{i,j}$ terms to collect w.r.t $\epsilon$ we get,
+\begin{widetext}
+\begin{eqnarray*}
+s^2_{1,2}&=\frac{4 w^2 \omega_p^2+e^{\epsilon } \left(12 w^3 \omega_p-2 \mu  w^2 \omega_p-2 \mu ^2 w \omega_p\right)+e^{2 \epsilon } \left(9 w^4+6 \mu  w^3+\mu ^2 w^2\right)-4 \mu  w \omega_p^2+\mu ^2 \omega_p^2}{12 w^2 \omega_p^2+e^{\epsilon } \left(16 w^3 \omega_p+16 \mu  w^2 \omega_p+16 \mu ^2 w \omega_p\right)+e^{2 \epsilon } \left(12 w^4+12 \mu  w^3+12 \mu ^2 w^2\right)+12 \mu  w \omega_p^2+12 \mu ^2 \omega_p^2}\\
+s^2_{1,3}&=\frac{4 w^2 \omega_pe^{2 \gamma }+e^{\epsilon } \left(12 e^{\gamma } w^3 \omega_pe^{\gamma }-6 e^{\gamma } \mu  w^2 \omega_p+4 \mu  w^2 \omega_pe^{\gamma }-2 \mu ^2 w \omega_p\right)+e^{2 \epsilon } \left(9 e^{2 \gamma } w^4+6 e^{\gamma } \mu  w^3+\mu ^2 w^2\right)-4 \mu  w \omega_p \omega_p e^{\gamma }+\mu ^2 \omega_p^2}{12 e^{2 \gamma } w^2 \omega_p^2+e^{\epsilon } \left(16 e^{2 \gamma } w^3 \omega_p+16 w^2 \omega_p \text{$\mu $e}^{\gamma }+16 \mu ^2 w \omega_p\right)+e^{2 \epsilon } \left(12 e^{2 \gamma } w^4+12 w^3 \text{$\mu $e}^{\gamma }+12 \mu ^2 w^2\right)+12 w \omega_p^2 \text{$\mu $e}^{\gamma }+12 \mu ^2 \omega_p^2}.\\
+\end{eqnarray*}
+\end{widetext}
+
+In the limit of $\epsilon\to\infty$ we have %the terms go to the limits given by the following expressions,
+\begin{eqnarray*}
+\lim_{\epsilon\to\infty}{s^2_{1,2}}&=\frac{\left(9 w^4+6 \mu  w^3+\mu ^2 w^2\right)}{\left(12 w^4+12 \mu  w^3+12 \mu ^2 w^2\right)}\\
+\lim_{\epsilon\to\infty}{s^2_{1,3}}&=\frac{\left(9 e^{2 \gamma } w^4+6 e^{\gamma } \mu  w^3+\mu ^2 w^2\right)}{\left(12 e^{2 \gamma } w^4+12 w^3 \text{$\mu $e}^{\gamma }+12 \mu ^2 w^2\right)}.\\
+\end{eqnarray*}
+In contrast, as $\epsilon\to-\infty$ we have:
+\begin{eqnarray*}
+\lim_{\epsilon\to-\infty}{s^2_{1,2}}&=\frac{(\mu -2 w)^2}{12 \left(\mu ^2+w^2+\mu  w\right)}\\
+\lim_{\epsilon\to-\infty}{s^2_{1,3}}&=\frac{\left(\mu-2 w e^{\gamma }\right)^2}{12\left(\mu ^2+e^{2 \gamma } w^2+w \text{$\mu $e}^{\gamma }\right)}.
+\end{eqnarray*}
+To understand the behavior of these expressions, we introduce the ratio variable $\sigma=\frac{w}{\mu}$: %making this substitution, 
+\begin{eqnarray*}
+\lim_{\epsilon\to\infty}{s^2_{1,2}}&=\frac{\left(9 \sigma^4+6 \sigma^3+\sigma^2\right)}{\left(12 \sigma^4+12 \sigma^3+12 \sigma^2\right)}\\
+\lim_{\epsilon\to\infty}{s^2_{1,3}}&=\frac{\left(9 e^{2 \gamma } \sigma^4+6 e^{\gamma } \sigma^3+\sigma^2\right)}{\left(12 e^{2 \gamma } \sigma^4+12 \sigma^3e^{\gamma }+12\sigma^2\right)},\\
+\end{eqnarray*}
+and:
+\begin{eqnarray*}
+\lim_{\epsilon\to-\infty}{s^2_{1,2}}&=\frac{(1 -2\sigma)^2}{12 \left(1+\sigma^2+\sigma\right)}\\
+\lim_{\epsilon\to-\infty}{s^2_{1,3}}&=\frac{\left(1-2 \sigma e^{\gamma }\right)^2}{12\left(1+e^{2 \gamma } \sigma^2+\sigma \mu e^{\gamma }\right)}.
+\end{eqnarray*}
+In the limit of large $\sigma$, we have: %both of these terms converge to 3/4 and 1/3 respectively, thus 
+\[
+\lim_{\epsilon\to\infty}\sum{s^2_{i,j}}\propto\frac{3}{4}>\lim_{\epsilon\to-\infty}\sum{s^2_{i,j}}\propto\frac{1}{3}
+\]
+\subparagraph{The increase in $\sum{s^2_{i,j}}$ is monotonic}
+Again the ${s^2_{2,3}}$ term is not a function of $\epsilon$, so considering only the terms of type ${s^2_{1,j}}$
+\begin{widetext}
+\[
+\begin{aligned}
+\frac{d}{d\eps}{s^2_{1,j}} = 40 e^\eps \wpp \oom \left(m'^2+m' \oom+\oom^2\right) &\left[3 e^\eps \wpp \oom^2 (2 m'+\oom)+e^{2 \eps} m' \oom^2 (m'+3 \oom)\right.\\
+&\left. +\wpp^2
+   \left(-m'^2+m' \oom+2 \oom^2\right)\right]
+\end{aligned}
+\]
+\end{widetext}
+
+As expected, these terms are monotonically increasing except when $-m'^2\wpp^2$ dominates all other (positive) terms in the square bracket, which requires $m'$ large, and $\frac{\wpp}{e^\eps \oom}> 1,$ far from the proofreading limit.
+Putting these sums back into the equation for orthogonality we can verify that orthogonality is decreasing as $\epsilon$ increases in the proofreading limit ($\sigma\approx50$)
+\[
+\lim_{\epsilon\to-\infty}\Theta=-0.3394>\lim_{\epsilon\to\infty}\Theta=-0.8635.
+\]
+
+\paragraph{Energetic Limit 3: $\omega_p\to0$}
+Again it is instructive to rearrange $s^2_{i,j}$ to collect the $\omega_p$ terms.  Again the third term is not a function of $\omega_p$, This gives
+\begin{widetext}
+\begin{eqnarray*}
+s^2_{1,2}&=\frac{9 w^4 e^{2 \epsilon }+6 \mu  w^3 e^{2 \epsilon }+\omega_p^2 \left(\mu ^2+4 w^2-4 \mu  w\right)+\mu ^2 w^2 e^{2 \epsilon }+\omega_p \left(12 w^3 e^{\epsilon }-2 \mu  w^2 e^{\epsilon }-2 \mu ^2 w e^{\epsilon }\right)}{12 w^4 e^{2 \epsilon }+12 \mu  w^3 e^{2 \epsilon }+\omega_p^2 \left(12 \mu ^2+12 w^2+12 \mu  w\right)+12 \mu ^2 w^2 e^{2 \epsilon }+\omega_p \left(16 w^3 e^{\epsilon }+16 \mu  w^2 e^{\epsilon }+16 \mu ^2 w e^{\epsilon }\right)}\\
+s^2_{1,3}&=\frac{9 w^4 e^{2 \gamma +2 \epsilon }+6 \mu  w^3 e^{\gamma +2 \epsilon }+12 w^3 e^{\gamma +\epsilon }\omega_p e^{\gamma }+\omega_p \left(-6 \mu  w^2 e^{\gamma +\epsilon }-4 \mu  w\omega_p e^{\gamma }-2 \mu ^2 w e^{\epsilon }\right)+4 w^2\omega_p e^{2 \gamma }+4 \mu  w^2 e^{\epsilon }\omega_p e^{\gamma }+\mu ^2 w^2 e^{2 \epsilon }+\mu ^2 \omega_p^2}{12 w^4 e^{2 \gamma +2 \epsilon }+12 w^3 e^{2 \epsilon } \text{$\mu $e}^{\gamma }+\omega_p^2 \left(12 \mu ^2+12 e^{2 \gamma } w^2+12 w \text{$\mu $e}^{\gamma }\right)+12 \mu ^2 w^2 e^{2 \epsilon }+\omega_p \left(16 w^3 e^{2 \gamma +\epsilon }+16 w^2 e^{\epsilon } \text{$\mu $e}^{\gamma }+16 \mu ^2 w e^{\epsilon }\right)}\\
+\end{eqnarray*}
+\end{widetext}
+and we must show that the sums are decreasing in $\omega_p$, i.e.
+\[
+\lim_{\omega_p\to0}\sum{s^2_{i,j}}>\lim_{\omega_p\to\infty}\sum{s^2_{i,j}}
+\]
+In the limit of $\omega_p\to0$ we have %the terms go to the limits given by the following expressions,
+\begin{eqnarray*}
+\lim_{\omega_p\to0}{s^2_{1,2}}&=\frac{(\mu +3 w)^2}{12 \left(\mu ^2+w^2+\mu  w\right)}\\
+\lim_{\omega_p\to0}{s^2_{1,3}}&=\frac{\left(\mu +3 e^{\gamma } w\right)^2}{12 \left(\mu ^2+w \left(\text{$\mu $e}^{\gamma }+e^{2 \gamma } w\right)\right)},\\
+\end{eqnarray*}
+while in the limit of $\omega_p\to\infty$ 
+\begin{eqnarray*}
+\lim_{\omega_p\to\infty}{s^2_{1,2}}&=\frac{\mu ^2+4 w^2-4 \mu  w}{12 \mu ^2+12 w^2+12 \mu  w}\\
+\lim_{\omega_p\to\infty}{s^2_{1,3}}&=\frac{\left(\mu -2 e^{\gamma } w\right)^2}{12 \left(\mu ^2+e^{2 \gamma } w^2+w \text{$\mu $e}^{\gamma }\right)}.
+\end{eqnarray*}
+Making the same substitutions as before ($\sigma=w/\mu$) gives:
+\begin{eqnarray*}
+\lim_{\omega_p\to0}{s^2_{1,2}}&=\frac{(1 +3 \sigma)^2}{12 \left(1+\sigma^2+\sigma\right)}\\
+\lim_{\omega_p\to0}{s^2_{1,3}}&=\frac{\left(1 +3 e^{\gamma } \sigma\right)^2}{12 \left(1+\sigma e^{\gamma}+e^{2\gamma} \sigma^2\right)}
+\end{eqnarray*}
+and
+\begin{eqnarray*}
+\lim_{\omega_p\to\infty}{s^2_{1,2}}&=\frac{1+4 \sigma^2-4 \sigma}{12 +12 \sigma^2+12 \sigma}\\
+\lim_{\omega_p\to\infty}{s^2_{1,3}}&=\frac{\left(1 -2 e^{\gamma } \sigma\right)^2}{12 \left(1+e^{2 \gamma } \sigma^2+\sigma e^{\gamma }\right)}.\\
+\end{eqnarray*}
+As previously we have the desired result directly:
+\[
+\lim_{\omega_p\to0}\sum{s^2_{i,j}}\propto\frac{3}{4}>\lim_{\omega_p\to\infty}\sum{s^2_{i,j}}\propto\frac{1}{3}.
+\]
+\subparagraph{The increase in $\sum{s^2_{i,j}}$ is monotonic}
+We compute
+\begin{widetext}
+\[
+\begin{aligned}
+\frac{d}{d\omega_p}{s^2_{1,j}} =  -40 e^\eps \oom \left(m'^2+m' \oom+\oom^2\right) &\left[3 e^\eps \wpp \oom^2 (2 m'+\oom)+e^{2 \eps} m' \oom^2 (m'+3 \oom)\right.\\
+&\left. +\wpp^2
+   \left(-m'^2+m' \oom+2 \oom^2\right)\right].
+\end{aligned}
+\]
+\end{widetext}
+These terms are monotonically decreasing except for when $-m'^2\wpp^2$ dominates all other (positive) terms in the square bracket, which requires $m'$ large, and $\frac{\wpp}{e^\eps \oom}> 1.$
+
+Putting these sums back into the equation for orthogonality we can verify that orthogonality is increasing as $\omega_p$ increases in the proofreading limit ($\sigma\approx50$)
+\[
+\lim_{\omega_p\to0}\Theta=-0.8635<\lim_{\omega_p\to\infty}\Theta=-0.3395
+\]
+
+\paragraph{The Hopfield Network in the Kinetic Regime}
+\subparagraph{Derivation of the kinetic regime error rate}
+
+We first derive an expression for the error rate in the kinetic regime of the Ninio-Hopfield scheme, $\xi_{\text{kinetic}}$.  We then determine the appropriate proofreading limits in the kinetic regime.  
+
+We compute that:
+\begin{widetext}
+\begin{equation}\label{kin_error}
+\begin{aligned}
+\xi_{\text{kinetic}} &= \frac{(e^{\epsilon+\eil}\oom\oom_i+\oom\wpp+e^{\eil}\oom_i\wpp) (e^{2\delta}\oom\oom_i+e^{\delta+\epl}\oom\wpp+e^{\eil+\epl}\oom_i\wpp) }{(e^{2\delta+\eps+\eil}\oom\oom_i+e^\delta\oom\wpp+e^{\eil}\oom_i\wpp)(\oom\oom_i+e^{\epl}\oom\wpp+e^{\eil+\wpp}\oom_i\wpp)}\\
+&=\frac{(e^{\eps+\eil}a + b + c)(e^{2\delta}a + e^{\epl+\delta}b + e^{\epl}c)}{(e^{2\delta+\epsilon + \eil}a + e^{\delta}b + c)(a + e^{\epl}b + e^{\epl}c)}\\
+& = \frac{(e^{2\delta}a + e^{\delta+\epl}b + e^{\epl}c)(e^{\eps+\eil}a + b + c)}{(e^{2\delta+\epsilon+\eil}a + e^\delta b + c)(a + e^\epl b + e^\epl c)}
+\end{aligned}
+\end{equation}
+\end{widetext}
+where we have let $a = \oom\oom_i, \ b = \oom\wpp, \ c = \oom_i\wpp\eei.$
+
+When the total dissipation $\eil + \epl + \eps$ is high, the terms $e^{\eps+\eil}$ in Equation \ref{kin_error} will dominate.  We therefore have that
+\[
+\xi_{\text{kinetic}} \approx \frac{e^{2\delta}a+e^{\delta+\epl}b + e^\epl c}{e^{2\delta}a + e^{2\delta+\epl}b + e^{2\delta+\epl}c}
+\]
+from which it is clear that proofreading requires that $\epp/a$ be very large.  Moreover, the error fraction is minimized when $c/b$ is very large.  Note that proofreading can still occur when $b/c>>1,$ but the error fraction is not minimized in this regime.  Translating these conditions into Kramer's form parameters gives the necessary limits for maximum discrimination
+\[
+\epp \to \infty, \ \frac{\oom_i\eei}{\oom} \to \infty.
+\]
+
+As in the energetic regime, we take $m'=\mu = \oom_i\eei$, and write the limits as:
+\[
+\epp \to \infty, \ \frac{\mu}{\omega}\to\infty \to \infty.
+\]
+%We start by noticing that these limits dictate that kinetic discrimination requires $\frac{\mu}{\omega}\to\infty$ where $\mu=\omega_i e^{\epsilon_i}$ as before. If we consider $\omega$, we require that orthogonality is a decreasing function of $\omega$, which we have already proved in previous section.  In addition, orthogonality is independent of $\epsilon_p$, it therefore remains to demonstrate that orthogonality is monotonically increasing in $\mu$.  
+
+We now investigate orthogonality in these discriminatory limits.
+
+\subparagraph{Orthogonality is increasing with $\mu$}
+Recall that increasing orthogonality requires $\sum s^2_{i,j}$ decreasing.  Lets begin by rewriting the elements of $\sum{s^2_{i,j}}$ w.r.t $\mu$
+\begin{widetext}
+\begin{eqnarray*}
+s^2_{1,2}&=\frac{\left(\omega  e^{\delta +\epsilon } (\mu +2 \omega )+e^{-\delta_p} \omega_p(\omega -\mu )+\omega  \omega_p+\omega ^2 e^{\epsilon }\right)^2}{2 \left(\mu ^2+\mu  \omega +\omega ^2\right) \left(\left(\left(e^{\delta }+1\right) \omega  e^{\epsilon }+e^{-\delta_p} \omega_p+\omega_p\right)^2+\omega ^2 e^{2 (\delta +\epsilon )}+e^{-2 \delta_p} \omega_p^2+\omega_p^2+\omega ^2 e^{2 \epsilon }\right)}\\
+s^2_{1,3}&=\frac{\left(\omega  \left(\omega  \left(-e^{\delta +\epsilon }\right)-e^{-\delta_p} \omega_p-\omega_p-\omega  e^{\epsilon }\right)+\mu  \omega_p+\omega  e^{\epsilon } (-\mu -\omega )\right)^2}{\left(\mu ^2+(\mu +\omega )^2+\omega ^2\right) \left(\left(\omega  e^{\delta +\epsilon }+e^{-\delta_p} \omega_p+\omega_p+\omega  e^{\epsilon }\right)^2+\omega ^2 e^{2 \delta +2 \epsilon }+e^{-2 \delta_p} \omega_p^2+\omega_p^2+\omega ^2 e^{2 \epsilon }\right)}\\
+s^2_{2,3}&=\frac{\omega ^4 e^{2 \delta }}{4 \left(\mu ^2+\mu  \omega +\omega ^2\right) \left(\omega ^2 e^{2 \delta }+\mu  \omega  e^{\delta }+\mu ^2\right)}.\\
+\end{eqnarray*}
+\end{widetext}
+Because $s^2_{2,3}$  has $\mu$ in the denominator but not in the numerator it must go to zero as $\mu\to\infty$.  The expressions for the remaining $s^2_{1,i}$ terms are,
+\begin{widetext}
+\begin{eqnarray*}
+\lim_{\mu\to0}{s^2_{1,2}}&=\frac{\left(2 \omega  e^{\delta +\delta_p+\epsilon }+e^{\delta_p} \omega_p+\omega  e^{\delta_p+\epsilon }+\omega_p\right)^2}{4 \left(\omega ^2 e^{2 (\delta +\delta_p+\epsilon )}+\omega ^2 e^{\delta +2 (\delta_p+\epsilon )}+\omega  \omega_p e^{\delta +\delta_p+\epsilon }+\omega  \omega_p e^{\delta +2 \delta_p+\epsilon }+e^{\delta_p} \omega_p^2+e^{2 \delta_p} \omega_p^2+\omega ^2 e^{2 (\delta_p+\epsilon )}+\omega  \omega_p e^{\delta_p+\epsilon }+\omega  \omega_p e^{2 \delta_p+\epsilon }+\omega_p^2\right)}\\
+\lim_{\mu\to0}{s^2_{1,3}}&=\frac{\left(\omega  e^{\delta +\delta_p+\epsilon }+e^{\delta_p} \omega_p+2 \omega  e^{\delta_p+\epsilon }+\omega_p\right)^2}{4 \left(\omega ^2 e^{2 (\delta +\delta_p+\epsilon )}+\omega ^2 e^{\delta +2 (\delta_p+\epsilon )}+\omega  \omega_p e^{\delta +\delta_p+\epsilon }+\omega  \omega_p e^{\delta +2 \delta_p+\epsilon }+e^{\delta_p} \omega_p^2+e^{2 \delta_p} \omega_p^2+\omega ^2 e^{2 (\delta_p+\epsilon )}+\omega  \omega_p e^{\delta_p+\epsilon }+\omega  \omega_p e^{2 \delta_p+\epsilon }+\omega_p^2\right)}\\
+\end{eqnarray*}
+and
+\begin{eqnarray*}
+\lim_{\mu\to\infty}{s^2_{1,2}}&=\frac{\left(\omega_p-\omega  e^{\delta +\delta_p+\epsilon }\right)^2}{4 \left(\omega ^2 e^{2 (\delta +\delta_p+\epsilon )}+\omega ^2 e^{\delta +2 (\delta_p+\epsilon )}+\omega  \omega_p e^{\delta +\delta_p+\epsilon }+\omega  \omega_p e^{\delta +2 \delta_p+\epsilon }+e^{\delta_p} \omega_p^2+e^{2 \delta_p} \omega_p^2+\omega ^2 e^{2 (\delta_p+\epsilon )}+\omega  \omega_p e^{\delta_p+\epsilon }+\omega  \omega_p e^{2 \delta_p+\epsilon }+\omega_p^2\right)}\\
+\lim_{\mu\to\infty}{s^2_{1,3}}&=\frac{e^{2 \delta_p} \left(\omega_p-\omega  e^{\epsilon }\right)^2}{4 \left(\omega ^2 e^{2 (\delta +\delta_p+\epsilon )}+\omega ^2 e^{\delta +2 (\delta_p+\epsilon )}+\omega  \omega_p e^{\delta +\delta_p+\epsilon }+\omega  \omega_p e^{\delta +2 \delta_p+\epsilon }+e^{\delta_p} \omega_p^2+e^{2 \delta_p} \omega_p^2+\omega ^2 e^{2 (\delta_p+\epsilon )}+\omega  \omega_p e^{\delta_p+\epsilon }+\omega  \omega_p e^{2 \delta_p+\epsilon }+\omega_p^2\right)}.\\
+\end{eqnarray*}
+\end{widetext}
+Here we will again make a ratio substitution, $\tau=\omega e^{\epsilon}/\omega_p$ and send $\tau\to\infty$ and required in the kinetic discriminatory regime.  In this limit, we have: %get the following expressions
+\begin{eqnarray*}
+\lim_{\mu\to0}{s^2_{1,2}}&=\frac{1+4e^{\delta}+4e^{2\delta}}{4+4e^{\delta}+4e^{2\delta}}\\
+\lim_{\mu\to0}{s^2_{1,3}}&=\frac{4+4e^{\delta}+e^{2\delta}}{4+4e^{\delta}+4e^{2\delta}}\\
+\end{eqnarray*}
+and
+\begin{eqnarray*}
+\lim_{\mu\to\infty}{s^2_{1,2}}&=\frac{e^{2\delta}}{4+4e^{\delta}+4e^{2\delta}}\\
+\lim_{\mu\to\infty}{s^2_{1,3}}&=\frac{1}{4+4e^{\delta}+4e^{2\delta}}.\\
+\end{eqnarray*}
+
+This gives the desired result,
+\[
+\lim_{\mu\to0}\sum{s^2_{i,j}}>\lim_{\mu\to\infty}\sum{s^2_{i,j}}.
+\]
+%and $\sum{s^2_{i,j}}$ decreasing corresponds to orthogonality increasing.  
+Putting these sums back into the equation for orthogonality we can verify that orthogonality is increasing as $\mu$ increases in the proofreading limit ($\tau\approx10^4$):
+\[
+\lim_{\mu\to0}\Theta=-0.819<\lim_{\mu\to\infty}\Theta=0.3612.
+\]
+\paragraph{The increase in $\sum{s^2_{i,j}}$ is monotonic}
+Again it is easiest to start with the $s^2_{2,3}$ term.  An application of the quotient rule reveals that $\frac{d}{d\mu}s^2_{2,3}<0.$  
+%Using the quotient rule for derivatives, we van set $u=\omega ^4 e^{2 \delta }$ and $v=4 \left(\mu ^2+\mu  \omega +\omega ^2\right) \left(\omega ^2 e^{2 \delta }+\mu  \omega  e^{\delta }+\mu ^2\right)$.  Because $u$ is not a function of $\mu$, $\frac{du}{d\mu}=0$ and the numerator of the derivative is $-udv<0$.  The derivatives of the other two terms are
+The remaining derivatives are given by
+\begin{widetext}
+\begin{eqnarray*}
+\frac{d}{d\mu}s^2_{1,2}&=-\frac{\omega  \left(\omega  (\mu +2 \omega ) e^{\delta +\delta_p+\epsilon }+e^{\delta_p} \omega  \omega_p+\omega ^2 e^{\delta_p+\epsilon }+\omega_p (\omega -\mu )\right) \left(3 \mu  \omega  e^{\delta +\delta_p+\epsilon }+e^{\delta_p} \omega_p (2 \mu +\omega )+\omega  e^{\delta_p+\epsilon } (2 \mu +\omega )+3 \omega_p (\mu +\omega )\right)}{4 \left(\mu ^2+\mu  \omega +\omega ^2\right)^2 \left(\omega ^2 e^{2 (\delta +\delta_p+\epsilon )}+\omega ^2 e^{\delta +2 (\delta_p+\epsilon )}+\omega  \omega_p e^{\delta +\delta_p+\epsilon }+\omega  \omega_p e^{\delta +2 \delta_p+\epsilon }+e^{\delta_p} \omega_p^2+e^{2 \delta_p} \omega_p^2+\omega ^2 e^{2 (\delta_p+\epsilon )}+\omega  \omega_p e^{\delta_p+\epsilon }+\omega  \omega_p e^{2 \delta_p+\epsilon }+\omega_p^2\right)}\\
+\frac{d}{d\mu}s^2_{1,3}&=-\frac{\omega  \left(\omega  (2 \mu +\omega ) e^{\delta +\delta_p+\epsilon }+3 e^{\delta_p} \omega_p (\mu +\omega )+3 \mu  \omega  e^{\delta_p+\epsilon }+\omega_p (2 \mu +\omega )\right) \left(\omega  e^{\delta_p+\epsilon } \left(\left(e^{\delta }+2\right) \omega +\mu \right)+\omega_p \left(e^{\delta_p} (\omega -\mu )+\omega \right)\right)}{4 \left(\mu ^2+\mu  \omega +\omega ^2\right)^2 \left(\omega ^2 e^{2 (\delta +\delta_p+\epsilon )}+\omega  e^{\delta +\delta_p+\epsilon } \left(e^{\delta_p} \left(\omega_p+\omega  e^{\epsilon }\right)+\omega_p\right)+e^{\delta_p} \omega_p^2+e^{2 \delta_p} \omega_p^2+\omega ^2 e^{2 (\delta_p+\epsilon )}+\omega  \omega_p e^{\delta_p+\epsilon }+\omega  \omega_p e^{2 \delta_p+\epsilon }+\omega_p^2\right)}\\
+\end{eqnarray*}
+\end{widetext}
+Which are both strictly negative.  We conclude that $\sum{s^2_{i,j}}$ is a monotonically decreasing function of $\mu,$ thus orthogonality is monotonically increasing.
+
+
+
+
+

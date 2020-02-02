@@ -1,0 +1,20 @@
+\pgfplotsset{yticklabel style={text width=5em,align=right}}
+\begin{figure}[htb]
+
+\resizebox{0.75\columnwidth}{!}{
+\subfigure{
+\input{Figures/Panels/linepara.tex}}
+}
+\resizebox{0.76\columnwidth}{!}{
+\subfigure{
+\input{Figures/Panels/processive.tex}}
+}
+%\resizebox{0.75\columnwidth}{!}{
+%\subfigure{
+%\input{Figures/Panels/sparsity.tex}}
+%}
+\caption{Orthogonality captures the number of effective pathways directed at discriminatory nodes.  (a) A toy four-node discriminatory scheme.  (b) When each black and red arrow in panel (a) has weight $k, \ l$ (respectively) we find that the orthogonality ($\Theta$) decreases as the black arrows dominate, creating a singly dominant path.  Note that the $x$-axis begins at $r=1,$ corresponding to an all-to-all connected graph with equal weights.\label{fig:toy_model}}
+\end{figure}
+
+
+%As connections of equal order of magnitude are deleted from an all-to-all connected graph, orthogonality decreases.  For each graph, a fraction of nodes were randomly deleted; error bars represent standard deviation of orthogonality over 1000 trials at each sparsity. At 0 is $\Theta(Grid)$ 

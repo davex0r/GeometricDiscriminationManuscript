@@ -1,0 +1,128 @@
+\section{Orthogonality and Error in the Ladder Graph}
+\label{app:ladder_orth}
+
+We first derive the discriminatory limit in the energetic regime.  Recall that
+
+\subsection{Energetic regime}
+\[
+\xi_{\rm energetic} = \frac{(f+d_R)^\alpha}{e^\gamma(f+d_Re^\gamma)^\alpha}.
+\]
+The substitution $\eta=\frac{d_R}{f}$ gives
+\[
+\xi_{\rm energetic} = \frac{(1+\eta)^\alpha}{e^\gamma(1+\eta e^\gamma)^\alpha}
+\]
+from which read off that proofreading requires $\eta$ to be large.  This corresponds to the intuition that the rate of discards must be large with respect the reaction speed.  
+
+We must now demonstrate that orthogonality is decreasing as $\eta$ becomes large.
+
+%With this in mind, we would like to calculate the orthogonality and show that in the energetic regime, it is a decreasing function of $\eta$
+
+As in the Ninio-Hopfield case, we will use the notation $\sum{s^2_{i,j}}$ to denote the squared, normalized inner product between columns $i, j$ in Matrix $\mathcal{L}^{a,b}$ formed by deleting the columns corresponding to the discriminatory nodes $a, b$ from the full Laplacian for this graph.
+
+For any given loop of the ladder, these terms are given by
+\[
+\begin{aligned}
+ \la x_{si}, y_{s(i+1)} \ra^2 &=\frac{(b d+f u)^2}{4 \left(b^2+b u+u^2\right) \left(d^2+d f+f^2\right)}\\
+ \la y_{si}, y_{s(i+1)} \ra^2 &= \frac{b^2 (b+u)^2}{4 \left(b^2 + bu+ u^2\right)^2}\\
+ \la x_{si}, x_{s(i+1)}\ra^2 &=\frac{f^2 (d+f)^2}{4 \left(d^2+d f+f^2\right)^2}\\
+ \la x_{si}, y_{si}\ra^2 &=\frac{(b d+2 d u+f u)^2}{4 \left(b^2+b u+u^2\right) \left(d^2+d f+f^2\right)}.
+ \end{aligned}
+\]
+For $N$ loops, there will be $N$ of each of these terms except for $ \la x_{si}, x_{s(i+1)}\ra^2$ for which there will be $(N-1)$ for each side of the ladder.  In addition, there will be two terms that originate from the reactant node (note in this case we are considering a slightly altered graph, where $k_{off}=b$ and $k_{on}=f$, and $k_{on}$ connects 0 to $x_{s0}$).   These are given as
+\[
+\begin{aligned}
+\la 0, x_{s0} \ra^2 &= \frac{(2 b-u)^2}{12 \left(b^2+b u+u^2\right)} \\
+\la 0, y_{s0} \ra^2 &= \frac{(d+f)^2}{6 \left(d^2+(d+f)^2+f^2\right)}.\\
+\end{aligned}
+\]
+Recall that in the energetic regime, our effective parameter of interest if $\eta=d/f$, noting that  $\la y_{si}, y_{s(i+1)}$ and $\la 0, x_{s0} \ra^2$ are not functions of $\eta$ and making this substitution along with the another substitute $\phi=u/b$ gives %the following expressions,
+\[
+\begin{aligned}
+ \la x_{si}, y_{s(i+1)} \ra^2 &=\frac{(\eta+\phi)^2}{4 \left(1+ \phi+\phi^2\right) \left(1+\eta+\eta^2\right)}\\
+ \la x_{si}, x_{s(i+1)}\ra^2 &=\frac{(\eta+1)^2}{4 \left(1+\eta+\eta^2\right)^2}\\
+ \la x_{si}, y_{si}\ra^2 &=\frac{(\eta+2 \eta \phi+ \phi)^2}{4 \left(1+\phi+\phi^2\right) \left(1+\eta+\eta^2\right)}\\
+ \la 0, y_{s0} \ra^2 &=\frac{(\eta+1)^2}{12 \left(1+\eta+\eta^2\right)}\\
+ \end{aligned}
+\]
+We will set $\phi\to0$ for convenience.  In this limit we have:
+%What values should $\phi$ take for efficient proofreading in the energetic regime?  $u$ is the rate of rescues this rate must be small relative to the rate of backtracking for efficient proofreading which implies that $\phi\to 0$.  In this limit, the expressions become.
+\[
+\begin{aligned}
+\la x_{si}, y_{s(i+1)} \ra^2 &=\frac{\eta^2}{4 \left(1+\eta+\eta^2\right)}\\
+\la x_{si}, x_{s(i+1)}\ra^2 &=\frac{(\eta+1)^2}{4 \left(1+\eta+\eta^2\right)^2}\\
+\la x_{si}, y_{si}\ra^2 &=\frac{\eta^2}{4 \left(1+\eta+\eta^2\right)}\\
+\la 0, y_{s0} \ra^2 &=\frac{(\eta+1)^2}{12 \left(1+\eta+\eta^2\right)}\\
+\end{aligned}
+\]
+which take values 0, 1/4, 0, and 1/12 in the limit $\eta\to0$ and 1/4, 0, 1/4, and 1/12 in the limit $\eta\to\infty$ For $N$ loops, we will have N terms of the first and third type, and $N-1$ terms of the second type.  The last term is unchanged in these limits.  This gives the desired result, 
+\[
+\lim_{\eta\to 0}\sum s^2_{i,j} \propto \frac{N-1}{4}<\lim_{\eta\to\infty}\sum s^2_{i,j} \propto \frac{2N}{4}.
+\]
+Finally, we consider the case when $\phi\to\infty$.  Note that $\la x_{si}, x_{s(i+1)}\ra^2$ terms are not functions of $\phi$.  The two remaining terms to consider are,
+\[
+\begin{aligned}
+ \la x_{si}, y_{s(i+1)} \ra^2 &=\frac{(\eta+\phi)^2}{4 \left(1+ \phi+\phi^2\right) \left(1+\eta+\eta^2\right)}\\
+ \la x_{si}, y_{si}\ra^2 &=\frac{(\eta+2 \eta \phi+ \phi)^2}{4 \left(1+\phi+\phi^2\right) \left(1+\eta+\eta^2\right)}\\
+ \end{aligned}
+\]
+which in the $\phi\to\infty$ limit become,
+\[
+\begin{aligned}
+ \la x_{si}, y_{s(i+1)} \ra^2 &=\frac{1}{4 \eta ^2+4 \eta +4}\\
+ \la x_{si}, y_{si}\ra^2 &=\frac{4 \eta ^2+4 \eta +1}{4 \eta ^2+4 \eta +4}\\
+ \end{aligned}
+\]
+Combining these term yields,
+\[
+\lim_{\eta\to 0}\sum s^2_{i,j} \propto \frac{2N-1}{4}<\lim_{\eta\to\infty}\sum s^2_{i,j} \propto \frac{4N}{4}.
+\]
+
+We can directly compute that $\sum s^2_{i,j} $ is monotonically increasing in both the $\phi\to0$ and $\phi\to\infty$ limits.
+
+%To see that the orthogonality is monotonically decreasing in $\eta$, we need to prove that $\sum s^2{i,j} $ is monotonically increasing.  To do that, we combine all the terms that contribute to the sum with their appropriate multiplicities and take the derivative:
+%\[
+%\frac{d}{d\eta}\sum s^2{i,j}  = \frac{\eta  (\eta +2) \left(\eta +\eta ^2 N+1\right)}{2 \left(\eta ^2+\eta +1\right)^3}
+%\]
+%which is strictly positive.  
+
+\subsubsection{$\phi$ does not affect orthogonality in the $f\ll d$ limit}
+
+Before turning to the kinetic regime, we demonstrate that $\phi$ does not affect orthogonality in the energetic discrimination limit.
+
+%In the limit of $f\ll d$, the ratio parameter $\eta=d/f\to\infty$.  In this limit, the orthogonality does not depend on $u$ or $b$, and thus does not depend on the ratio parameter $\phi=u/b$.  
+
+We examine the elements $s^2_{i,j}$ that depend on $\phi$ in the $\eta\to\infty$ discriminatory limit.  Before taking the limit, we have
+\[
+\begin{aligned}
+\la x_{si}, y_{s(i+1)} \ra^2 &=\frac{(\eta+\phi)^2}{4 \left(1+ \phi+\phi^2\right) \left(1+\eta+\eta^2\right)}\\
+\la x_{si}, y_{si}\ra^2 &=\frac{(\eta+2 \eta \phi+ \phi)^2}{4 \left(1+\phi+\phi^2\right) \left(1+\eta+\eta^2\right)}\\
+\la y_{si}, y_{s(i+1)}\ra^2 &=\frac{(\phi +1)^2}{4 \left(\phi ^2+\phi +1\right)^2}.\\
+\end{aligned}
+\]
+In the $\eta\to\infty$ limit these become
+\[
+\begin{aligned}
+\la x_{si}, y_{s(i+1)} \ra &=\sqrt{\frac{1}{4 \phi ^2+4 \phi +4}}\\
+\la x_{si}, y_{si}\ra &=\sqrt{\frac{4 \phi ^2+4 \phi +1}{4 \phi ^2+4 \phi +4}}\\
+\la y_{si}, y_{s(i+1)}\ra &=\frac{(\phi +1)}{2 \left(\phi ^2+\phi +1\right)}.\\
+\end{aligned}
+\]
+Now we must evaluate  these in the limits of $\phi\to 0$ and $\phi\to\infty$, the first term goes from 1/2 to 0 as $\phi\to\infty$.  The second term goes from 1/2 to 1 and the third term goes from 1/2 to 0.  Because each loop consists of two of the second type term and one each of the first and third type term, the sum is the same in each limit.  
+
+In the full expression for orthogonality, we do observe a small non-constant dependence on $\phi$, but this is marginal and strictly decreases the orthogonality, thereby reinforcing our notion that $\phi$ cannot be used to increased realizable pathways in the low $f$ regime.  
+
+\subsection{Kinetic regime}
+
+We now need to demonstrate that 
+
+\[
+\xi_{\rm kinetic} =  \frac{(u+b)^\alpha(f+de^\delta)^\alpha}{(ue^\delta+b)^\alpha(f+d)^\alpha}.
+\]
+Define $\eta = d/f, \ \phi = u/b$ as before.
+\[
+\xi_{\rm kinetic} =  \frac{(\phi+1)^\alpha(1+\eta e^\delta)^\alpha}{(\phi e^\delta+1)^\alpha(\eta+1)^\alpha}.
+\]
+which attains its minimum of $e^{-\alpha\delta}$ in the limit $\phi \to \infty, \ \eta \to 0.$  
+The previous sections demonstrated that orthogonality is increasing in these limits.
+
+%These are exactly opposite the constraints for proofreading in the energetic regime, and we can conclude that because orthogonality will be increasing in these limits.  

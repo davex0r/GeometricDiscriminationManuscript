@@ -1,0 +1,35 @@
+\section{An expression for the error of a projection approximation}
+\label{app:proj}
+In this section, we aim to prove the following proposition.
+
+\begin{prop}[Normed projection approximation]{Let $S$ be a matrix having full rank (note that our $\mL^{i,j}$ are indeed of full rank).  We have that
+\[
+\begin{aligned}
+\norm{(S(S^TS)^{-1}S^T) - SS^T} &= \norm{I - S^TS}.
+\end{aligned}
+\]
+}
+\end{prop}
+\begin{proof}
+Let $S$ have singular value decomposition $S=U\Sigma W.$ 
+\[
+I - S^TS = I - W\Sigma^T\Sigma W^T = W[I - \Sigma^T\Sigma]W^T.
+\]
+And similarly (noting that $S^TS$ is invertible because $S$ is full rank):
+\begin{widetext}
+\[
+\begin{aligned}
+SS^T - S(S^TS)^{-1}S^T &=U\Sigma\Sigma^TU^T - U\Sig W^T(W\Sig^T\Sig W^T)^{-1}W\Sig^TU^T\\
+&=U\Sig\Sig^TU^T - U\Sig W^TW(\Sig^T\Sig)^{-1}W^TW\Sig^TU^T\\
+&=U\Sig\Sig^TU^T - U\Sig(\Sig^T\Sig)^{-1}\Sig^TU^T\\
+& = U(\Sig\Sig^T - \Sig(\Sig^T\Sig)^{-1}\Sig^T)U^T\\
+\end{aligned}
+\]
+\end{widetext}
+
+It follows by direct calculation ($\Sig$ is diagonal) that
+\[
+\norm{\Sig\Sig^T - \Sig(\Sig^T\Sig)^{-1}\Sig^T} = \norm{I - \Sig^T\Sig}.
+\]
+This gives the result.
+\end{proof}

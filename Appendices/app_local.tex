@@ -1,0 +1,13 @@
+\section{Orthogonality implies locality}
+\label{app_local}
+In this Appendix we wish to demonstrate that orthogonal networks have discrimination indices that do not depend on rates distant from the nodes being discriminated between.
+
+For an orthogonal network with Laplacian $\mL$ and discrimination nodes $i, j$, we have that
+\[
+\frac{\rho_i}{\rho_j} \approx \frac{\norm{v_j - \proj_\sij^{\text{orth}}(v_j)}}{\norm{v_i - \proj_\sij^{\text{orth}}(v_i)}}
+\]
+where $v_x$ is the column of $\mL$ which corresponds to node $x$, and where
+\[
+\proj_\sij^{\text{orth}}(v_i) = \sum_{l\in \sij}\langle v_i, v_l \rangle v_l
+\]
+Note that $\langle v_i, v_l \rangle\neq 0$ only if the $i$th and $l$th nodes on the digraph associated with $\mL$ are directly linked or direct arrows at at least one mutual node $k$.  The ratio ${\rho_i}/{\rho_j}$ is thus only a function of the rates associated with nodes at most two links away from states $i, j,$ along with rates associated with states $i,j$ themselves. 
