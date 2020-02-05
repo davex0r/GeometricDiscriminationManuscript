@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.13)  31 JAN 2020 15:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.13)  5 FEB 2020 09:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,33 +6,35 @@ entering extended mode
 **main_text_formatted.tex
 (./main_text_formatted.tex
 LaTeX2e <2019-10-01> patch level 3
-(/usr/local/texlive/2019/texmf-dist/tex/latex/revtex/revtex4-1.cls
-Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revt
-ex4/ for documentation)
- Copyright (c) 2009 The American Physical Society.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/revtex/revtex4-2.cls
+Document Class: revtex4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/re
+vtex/ for documentation)
+ Copyright (c) 2019 American Physical Society.
  mailto:revtex@aps.org
  Licensed under the LPPL:
 http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
  Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
- Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
-ltxutil[2010/07/25/20:33:00 4.1r utilities package (portions licensed from W. E
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>Version (4.2c)
+: Modified by Mark Doyle
+ .
+ltxutil[2019/01/18/14:29:48 4.2c utilities package (portions licensed from W. E
 . Baxter web at superscript.com)]
-LaTeX Info: Redefining \@centercr on input line 308.
-Class revtex4-1 Info: Repairing broken LaTeX eqnarray on input line 358.
+LaTeX Info: Redefining \@centercr on input line 315.
+Class revtex4-2 Info: Repairing broken LaTeX eqnarray on input line 365.
 \eqncolsep=\skip41
-Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfoot
-note on input line 433.
-Class revtex4-1 Info: Repairing broken LateX \@sect on input line 755.
+Class revtex4-2 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfoot
+note on input line 440.
+Class revtex4-2 Info: Repairing broken LateX \@sect on input line 762.
 \intertabularlinepenalty=\count80
 \@tbpen=\count81
 \@arstrutbox@hline=\box27
-Class revtex4-1 Info: Repairing broken LaTeX \@xbitor on input line 1786.
-Class revtex4-1 Info: Making \typeout \long on input line 2046.
-ltxfront[2010/07/25/20:33:00 4.1r frontmatter package (AO,DPC)]
+Class revtex4-2 Info: Repairing broken LaTeX \@xbitor on input line 1793.
+Class revtex4-2 Info: Making \typeout \long on input line 2053.
+ltxfront[2019/01/18/14:29:48 4.2c frontmatter package (AO,DPC,MD)]
 \c@affil=\count82
 \c@collab=\count83
 \absbox=\box28
-ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E
+ltxgrid[2019/01/18/14:29:48 4.2c page grid package (portions licensed from W. E
 . Baxter web at superscript.com)]
 \c@linecount=\count84
 \output@latex=\toks14
@@ -46,8 +48,8 @@ ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E
 \pagesofar=\box35
 \footsofar=\box36
 \pagegrid@col=\count85
-Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
- \\  on input line 5578.
+Class revtex4-2 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
+ \\  on input line 5585.
 \c@part=\count86
 \c@section=\count87
 \c@subsection=\count88
@@ -65,20 +67,19 @@ Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
 \@bibdataout=\write3
 \widetext@top=\box40
 \widetext@bot=\box41
-Class revtex4-1 Info: Selecting society aps on input line 7542.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/revtex/aps4-1.rtx
-File: aps4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for docu
-mentation)
-Class revtex4-1 Info: RevTeX society APS selected on input line 31.
+Class revtex4-2 Info: Selecting society aps on input line 7581.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/revtex/aps4-2.rtx
+File: aps4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/revtex/ for doc
+umentation)
+Class revtex4-2 Info: RevTeX society APS selected on input line 37.
 )
+Class revtex4-2 Info: Selecting journal prx on input line 7583.
+Class revtex4-2 Info: APS journal PRX selected on input line 7584.
 
-Class revtex4-1 Warning: No journal specified, using default pra.
-
-Class revtex4-1 Info: APS journal PRA selected on input line 7545.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/revtex/aps10pt4-1.rtx
-File: aps10pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for 
-documentation)
-Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/revtex/aps10pt4-2.rtx
+File: aps10pt4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/revtex/ for
+ documentation)
+Class revtex4-2 Info: RevTeX pointsize 10pt selected on input line 36.
 )
 (/usr/local/texlive/2019/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
@@ -166,14 +167,14 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count107
 )
-Class revtex4-1 Info: Repairing natbib's \BibitemShut on input line 7549.
+Class revtex4-2 Info: Repairing natbib's \BibitemShut on input line 7588.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/revtex/revsymb4-1.sty
-Package: revsymb4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ f
-or documentation)
-LaTeX Info: Redefining \frak on input line 95.
-LaTeX Info: Redefining \Bbb on input line 111.
-LaTeX Info: Redefining \REV@mathfrak on input line 119.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/revtex/revsymb4-2.sty
+Package: revsymb4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/revtex/ 
+for documentation)
+LaTeX Info: Redefining \frak on input line 101.
+LaTeX Info: Redefining \Bbb on input line 117.
+LaTeX Info: Redefining \REV@mathfrak on input line 125.
 ))
 (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
@@ -1206,17 +1207,12 @@ This is `epsf.tex' v2.7.4 <14 February 2011>
 \epsfysize=\dimen333
 \pspoints=\dimen334
 )) (./Headers/commands.tex)
-Class revtex4-1 Info: Unrecognized array package. Please update this document c
+Class revtex4-2 Info: Unrecognized array package. Please update this document c
 lass! (Proceeding with fingers crossed.) on input line 16.
-Class revtex4-1 Info: cite was not loaded (OK!) on input line 16.
-Class revtex4-1 Info: mcite was not loaded (OK!) on input line 16.
-Class revtex4-1 Info: multicol was not loaded (OK!) on input line 16.
-
-
-LaTeX Warning: Unused global option(s):
-    [prx].
-
-(./main_text_formatted.aux)
+Class revtex4-2 Info: cite was not loaded (OK!) on input line 16.
+Class revtex4-2 Info: mcite was not loaded (OK!) on input line 16.
+Class revtex4-2 Info: multicol was not loaded (OK!) on input line 16.
+ (./main_text_formatted.aux)
 \openout1 = `main_text_formatted.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -1360,7 +1356,7 @@ LaTeX Info: Redefining \nameref on input line 16.
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.16} (current compat level: 1.3).
 
-Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 16.
+Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 16.
 \openout3 = `main_text_formattedNotes.bib'.
 
 (./Sections/title.tex
@@ -1650,16 +1646,12 @@ Package rerunfilecheck Info: File `main_text_formatted.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.88pt have occured.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
-
  ) 
 Here is how much of TeX's memory you used:
- 38897 strings out of 492163
- 854873 string characters out of 6125306
- 2036896 words of memory out of 5000000
- 42249 multiletter control sequences out of 15000+600000
+ 38924 strings out of 492163
+ 855049 string characters out of 6125306
+ 2037367 words of memory out of 5000000
+ 42276 multiletter control sequences out of 15000+600000
  46551 words of font info for 139 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,23n,127p,8832b,3088s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1702,7 +1694,7 @@ cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm
 uper/sfrm2074.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-sup
 er/sfti0900.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super
 /sfti1000.pfb>
-Output written on main_text_formatted.pdf (24 pages, 878778 bytes).
+Output written on main_text_formatted.pdf (24 pages, 878685 bytes).
 PDF statistics:
  563 PDF objects out of 1000 (max. 8388607)
  493 compressed objects within 5 object streams
