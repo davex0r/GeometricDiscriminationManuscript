@@ -16,25 +16,30 @@ $x_{s0}$ \arrow($x_{s0}$--$x_{s1}$){->[$f$]}[,,,red]$x_{s1}$
 \end{center}
 where we have dropped the superscripts $d^S, \ u^S$ for clarity.
 
-We will use the Matrix-Tree theorem (MTT), which provides an expression for steady states in terms of {\it spanning trees}~\cite{Wong2018}.  Recall that a {\it spanning tree} of a graph $G$ is is a subgraph which: includes every vertex of $G$ and has no cycles (when edge directions ignored).  A spanning tree is said to be {\it rooted} at node $i$ if $i$ is the only vertex of the subgraph without any outgoing edges.
+We will use the Matrix-Tree theorem (MTT), which provides an expression for steady states in terms of {\it spanning trees}~\cite{Wong2018}.  Recall that a {\it spanning tree} of a graph $G$ is is a subgraph which includes every vertex of $G$ and has no cycles (when edge directions ignored).  A spanning tree is said to be {\it rooted} at node $i$ if node $i$ is the only vertex of the subgraph without any outgoing edges.
 
-The MTT provides an expression for the steady states of node $i$ in terms of the sum of the product of the rates of each spanning tree rooted at $i$.  That is:
-\[
+The MTT provides an expression for the steady state of node $i$ in terms of the sum of the product of the rates of each spanning tree rooted at $i$.  That is:
+\begin{equation}\label{eq:mtt}
 \rho_i = \sum_{T\in S_i(G) }\left(\prod_{j\stackrel{a}{\to} k\in T}a \right),
-\]
+\end{equation}
 where $S_i(G)$ is the set of all spanning trees of graph $G$ rooted at $i$.
 
-We will exploit the structure of our ladder network in order to simplify this expression.  Our ladder consists of two subgraphs (call them $G_R, \ G_W,$ corresponding to right, wrong products, respectively).  These two subgraphs are joined at a single node, $0.$  Because the subgraphs share a single node, the kernel element corresponding to node $i$ in subgraph $R$ is given by $\rho_i = \rho(G_R)\rho_0(G_W)$~\cite{Wong2018}.
-
+We will exploit the structure of our ladder network in order to simplify this expression.  Our ladder consists of two subgraphs joined at a single node, 0: $G = G_W \oplus_0 G_R$ ($G_R, \ G_W,$ corresponding to subgraphs for the right, wrong products, respectively).  Equation \ref{eq:mtt} implies that
+\[
+\rho_i(G_W \oplus_0 G_R) =
+ \begin{cases}
+       \rho_i(G_W)\rho_0(G_R), \ \text{if } i\in G_W\\
+      \rho_i(G_R)\rho_0(G_W), \ \text{if } i\in G_R.\\
+\end{cases}
+\]
+%Because the subgraphs share a single node, the kernel element corresponding to node $i$ in subgraph $R$ is given by $\rho_i = \rho(G_R)\rho_0(G_W)$~\cite{Wong2018}.
 This gives for the error
 \begin{equation}\label{jer_span}
-\xi = \frac{\rho_W}{\rho_R} = \frac{\rho_W(G_W)\rho_0(G_R)}{\rho_R(G_R)\rho_0(G_W)}.
+\xi = \frac{\rho_W}{\rho_R} = \frac{\rho_W(G_W)\rho_0(G_R)}{\rho_R(G_R)\rho_0(G_W)},
 \end{equation}
-
-We know that $\rho_S(G_S)$ $(\{S=W,R\})$ in Equation \ref{jer_span} represents the node at the top corner of the graph.  Similarly, $\rho_0(G_S)$ represents the node 0. 
+where $\rho_W, \rho_R$ represent the kernel elements corresponding to the discriminatory nodes in the upper corner of the wrong, right subgraphs (respectively).
 
 We therefore need only determine analytical expressions for the sums of (products of rate constants of) spanning trees rooted at the top corner and 0 nodes. 
-
 Let's count the trees rooted at $\rho_0(G_S)$ first.  In order for the tree to be rooted at $0$, there are a number of essential arrows:
 
 \bigskip
@@ -68,7 +73,7 @@ $x_{s0}$ \arrow($x_{s0}$--$x_{s1}$){->[$f$]}[,,,green]$x_{s1}$
 
 It is necessary and sufficient for a spanning tree rooted at $0$ to contain all of the red arrows, and exactly one of the green arrows and one of the blue arrows.  This holds in general; each loop in a ladder must contribute either a factor of $f$ or $d$ to a spanning tree rooted at 0.
 
-We can thus count the number of possible spanning trees, and the product of their rate constants
+We can thus compute:
 \[
 \begin{aligned}
 \rho_0(G_S) &= k_{\rm off}b^\alpha d \sum_{k=0}^\alpha {\alpha\choose k}f^{\alpha-k}d^k\\
