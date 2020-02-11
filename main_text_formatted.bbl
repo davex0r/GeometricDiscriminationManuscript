@@ -130,7 +130,7 @@ Fully-connected graphs are ones in which it is possible to (not necessary
   directly) get from every state to every other state.
 
 \bibitem{Note2}
-Throughout this text dissipation is calculated as the entorpy production rate,
+Throughout this text dissipation is calculated as the entropy production rate,
   $\Delta S_i = \frac {1}{2}\sum _{i,j}(k_{ij}\rho _j-k_{ji}\rho _i)\ln {\frac
   {k_{ij}\rho _j}{k_{ji}\rho _i}}$.
 
