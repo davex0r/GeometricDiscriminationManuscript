@@ -1,172 +1,216 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{28}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{Anderson2009}
+\bibitem[Hopfield(1974)]{Hopfield1974}
+J.~J. Hopfield.
+\newblock Kinetic proofreading: A new mechanism for reducing errors in
+  biosynthetic processes requiring high specificity.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 71\penalty0
+  (10):\penalty0 4135--4139, October 1974.
+\newblock \doi{10.1073/pnas.71.10.4135}.
+
+\bibitem[Ninio(1975)]{Ninio1975}
+Jacques Ninio.
+\newblock Kinetic amplification of enzyme discrimination.
+\newblock \emph{Biochimie}, 57\penalty0 (5):\penalty0 587--595, July 1975.
+\newblock \doi{10.1016/s0300-9084(75)80139-8}.
+
+\bibitem[Ehrenberg and Blomberg(1980)]{Ehrenberg1980}
+M.~Ehrenberg and C.~Blomberg.
+\newblock Thermodynamic constraints on kinetic proofreading in biosynthetic
+  pathways.
+\newblock \emph{Biophysical Journal}, 31\penalty0 (3):\penalty0 333--358,
+  September 1980.
+\newblock \doi{10.1016/s0006-3495(80)85063-6}.
+
+\bibitem[Murugan et~al.(2012)Murugan, Huse, and Leibler]{Murugan2012}
+Arvind Murugan, David~A Huse, and Stanislas Leibler.
+\newblock Speed, dissipation, and error in kinetic proofreading.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 109\penalty0
+  (30):\penalty0 12034--12039, 2012.
+
+\bibitem[Murugan et~al.(2014{\natexlab{a}})Murugan, Huse, and
+  Leibler]{Murugan2014}
+Arvind Murugan, David~A Huse, and Stanislas Leibler.
+\newblock Discriminatory proofreading regimes in nonequilibrium systems.
+\newblock \emph{Physical Review X}, 4\penalty0 (2):\penalty0 021016,
+  2014{\natexlab{a}}.
+
+\bibitem[Bennett(1979)]{Bennett1979}
+Charles~H. Bennett.
+\newblock Dissipation-error tradeoff in proofreading.
+\newblock \emph{Biosystems}, 11\penalty0 (2-3):\penalty0 85--91, August 1979.
+\newblock \doi{10.1016/0303-2647(79)90003-0}.
+
+\bibitem[Bennett(1982)]{Bennett1982}
+Charles~H. Bennett.
+\newblock The thermodynamics of computation.
+\newblock \emph{International Journal of Theoretical Physics}, 21\penalty0
+  (12):\penalty0 905--940, December 1982.
+\newblock \doi{10.1007/bf02084158}.
+
+\bibitem[Sartori and Pigolotti(2013)]{Sartori2013}
+Pablo Sartori and Simone Pigolotti.
+\newblock Kinetic versus energetic discrimination in biological copying.
+\newblock \emph{Physical Review Letters}, 110\penalty0 (18), May 2013.
+\newblock \doi{10.1103/physrevlett.110.188101}.
+
+\bibitem[Brangwynne et~al.(2009)Brangwynne, Eckmann, Courson, Rybarska, Hoege,
+  Gharakhani, Julicher, and Hyman]{Brangwynne2009}
+C.~P. Brangwynne, C.~R. Eckmann, D.~S. Courson, A.~Rybarska, C.~Hoege,
+  J.~Gharakhani, F.~Julicher, and A.~A. Hyman.
+\newblock Germline p granules are liquid droplets that localize by controlled
+  dissolution/condensation.
+\newblock \emph{Science}, 324\penalty0 (5935):\penalty0 1729--1732, May 2009.
+\newblock \doi{10.1126/science.1172046}.
+
+\bibitem[Note1()]{Note1}
+Note1.
+\newblock Fully-connected graphs are ones in which it is possible to (not
+  necessary directly) get from every state to every other state.
+
+\bibitem[Rao and Peliti(2015)]{Rao2015}
+Riccardo Rao and Luca Peliti.
+\newblock Thermodynamics of accuracy in kinetic proofreading: dissipation and
+  efficiency trade-offs.
+\newblock \emph{Journal of Statistical Mechanics: Theory and Experiment},
+  \penalty0 (6):\penalty0 P06001, 20, 2015.
+\newblock \doi{10.1088/1742-5468/2015/06/p06001}.
+
+\bibitem[Schnakenberg(1976)]{Schnakenberg1976}
+J{\"u}rgen Schnakenberg.
+\newblock Network theory of microscopic and macroscopic behavior of master
+  equation systems.
+\newblock \emph{Reviews of Modern physics}, 48\penalty0 (4):\penalty0 571,
+  1976.
+
+\bibitem[Wong et~al.(2018)Wong, Amir, and Gunawardena]{Wong2018}
+Felix Wong, Ariel Amir, and Jeremy Gunawardena.
+\newblock Energy-speed-accuracy relation in complex networks for biological
+  discrimination.
+\newblock \emph{Physical Review E}, 98\penalty0 (1), July 2018.
+\newblock \doi{10.1103/physreve.98.012420}.
+
+\bibitem[Note2()]{Note2}
+Note2.
+\newblock Throughout this text dissipation is calculated as the entropy
+  production rate, $\Delta S_i = \frac {1}{2}\sum _{i,j}(k_{ij}\rho
+  _j-k_{ji}\rho _i)\ln {\frac {k_{ij}\rho _j}{k_{ji}\rho _i}}$.
+
+\bibitem[Note3()]{Note3}
+Note3.
+\newblock An $N$-loop network will strictly speaking be composed of $2N+1$
+  loops, $N$ on each side of the ladder and a single reactant node.
+
+\bibitem[Murugan and Vaikuntanathan(2016)]{Murugan2016}
+Arvind Murugan and Suriyanarayanan Vaikuntanathan.
+\newblock Biological implications of dynamical phases in non-equilibrium
+  networks.
+\newblock \emph{Journal of Statistical Physics}, 162\penalty0 (5):\penalty0
+  1183--1202, February 2016.
+\newblock \doi{10.1007/s10955-015-1445-0}.
+
+\bibitem[Murugan et~al.(2014{\natexlab{b}})Murugan, Zeravcic, Brenner, and
+  Leibler]{Murugan2014a}
+Arvind Murugan, Zorana Zeravcic, Michael~P. Brenner, and Stanislas Leibler.
+\newblock Multifarious assembly mixtures: Systems allowing retrieval of diverse
+  stored structures.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 112\penalty0
+  (1):\penalty0 54--59, December 2014{\natexlab{b}}.
+\newblock \doi{10.1073/pnas.1413941112}.
+
+\bibitem[Sartori and Leibler(2019)]{Sartori2019}
+Pablo Sartori and Stanislas Leibler.
+\newblock Lessons from equilibrium statistical physics regarding the assembly
+  of protein complexes.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 117\penalty0
+  (1):\penalty0 114--120, December 2019.
+\newblock \doi{10.1073/pnas.1911028117}.
+
+\bibitem[Banani et~al.(2017)Banani, Lee, Hyman, and Rosen]{Banani2017}
+Salman~F. Banani, Hyun~O. Lee, Anthony~A. Hyman, and Michael~K. Rosen.
+\newblock Biomolecular condensates: organizers of cellular biochemistry.
+\newblock \emph{Nature Reviews Molecular Cell Biology}, 18\penalty0
+  (5):\penalty0 285--298, February 2017.
+\newblock \doi{10.1038/nrm.2017.7}.
+
+\bibitem[de~Groot et~al.(2019)de~Groot, Armaos, Gra{\~{n}}a-Montes, Alriquet,
+  Calloni, Vabulas, and Tartaglia]{Groot2019}
+Natalia~Sanchez de~Groot, Alexandros Armaos, Ricardo Gra{\~{n}}a-Montes, Marion
+  Alriquet, Giulia Calloni, R.~Martin Vabulas, and Gian~Gaetano Tartaglia.
+\newblock {RNA} structure drives interaction with proteins.
+\newblock \emph{Nature Communications}, 10\penalty0 (1), July 2019.
+\newblock \doi{10.1038/s41467-019-10923-5}.
+
+\bibitem[Hondele et~al.(2019)Hondele, Sachdev, Heinrich, Wang, Vallotton,
+  Fontoura, and Weis]{Hondele2019}
+Maria Hondele, Ruchika Sachdev, Stephanie Heinrich, Juan Wang, Pascal
+  Vallotton, Beatriz M.~A. Fontoura, and Karsten Weis.
+\newblock {DEAD}-box {ATPases} are global regulators of phase-separated
+  organelles.
+\newblock \emph{Nature}, 573\penalty0 (7772):\penalty0 144--148, August 2019.
+\newblock \doi{10.1038/s41586-019-1502-y}.
+
+\bibitem[Buchan and Parker(2009)]{Buchan2009}
+J.~Ross Buchan and Roy Parker.
+\newblock Eukaryotic stress granules: The ins and outs of translation.
+\newblock \emph{Molecular Cell}, 36\penalty0 (6):\penalty0 932--941, December
+  2009.
+\newblock \doi{10.1016/j.molcel.2009.11.020}.
+
+\bibitem[Anderson and Kedersha(2009)]{Anderson2009}
 Paul Anderson and Nancy Kedersha.
 \newblock {RNA} granules: post-transcriptional and epigenetic modulators of
   gene expression.
-\newblock {\em Nature Reviews Molecular Cell Biology}, 10(6):430--436, June
-  2009.
+\newblock \emph{Nature Reviews Molecular Cell Biology}, 10\penalty0
+  (6):\penalty0 430--436, June 2009.
+\newblock \doi{10.1038/nrm2694}.
 
-\bibitem{Banani2017}
-Salman~F. Banani, Hyun~O. Lee, Anthony~A. Hyman, and Michael~K. Rosen.
-\newblock Biomolecular condensates: organizers of cellular biochemistry.
-\newblock {\em Nature Reviews Molecular Cell Biology}, 18(5):285--298, February
-  2017.
+\bibitem[McCann et~al.(2011)McCann, Holohan, Das, Dervan, Larkin, Lee,
+  Rodrigues, Parker, and Ramaswami]{McCann2011}
+C.~McCann, E.~E. Holohan, S.~Das, A.~Dervan, A.~Larkin, J.~A. Lee,
+  V.~Rodrigues, R.~Parker, and M.~Ramaswami.
+\newblock The ataxin-2 protein is required for {microRNA} function and
+  synapse-specific long-term olfactory habituation.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 108\penalty0
+  (36):\penalty0 E655--E662, July 2011.
+\newblock \doi{10.1073/pnas.1107198108}.
 
-\bibitem{Barbee2006}
+\bibitem[Barbee et~al.(2006)Barbee, Estes, Cziko, Hillebrand, Luedeman, Coller,
+  Johnson, Howlett, Geng, Ueda, Brand, Newbury, Wilhelm, Levine, Nakamura,
+  Parker, and Ramaswami]{Barbee2006}
 Scott~A. Barbee, Patricia~S. Estes, Anne-Marie Cziko, Jens Hillebrand, Rene~A.
   Luedeman, Jeff~M. Coller, Nick Johnson, Iris~C. Howlett, Cuiyun Geng, Ryu
   Ueda, Andrea~H. Brand, Sarah~F. Newbury, James~E. Wilhelm, Richard~B. Levine,
   Akira Nakamura, Roy Parker, and Mani Ramaswami.
 \newblock Staufen- and {FMRP}-containing neuronal {RNPs} are structurally and
   functionally related to somatic p bodies.
-\newblock {\em Neuron}, 52(6):997--1009, December 2006.
+\newblock \emph{Neuron}, 52\penalty0 (6):\penalty0 997--1009, December 2006.
+\newblock \doi{10.1016/j.neuron.2006.10.028}.
 
-\bibitem{Bennett1979}
-Charles~H. Bennett.
-\newblock Dissipation-error tradeoff in proofreading.
-\newblock {\em Biosystems}, 11(2-3):85--91, August 1979.
-
-\bibitem{Bennett1982}
-Charles~H. Bennett.
-\newblock The thermodynamics of computation.
-\newblock {\em International Journal of Theoretical Physics}, 21(12):905--940,
-  December 1982.
-
-\bibitem{Brangwynne2009}
-C.~P. Brangwynne, C.~R. Eckmann, D.~S. Courson, A.~Rybarska, C.~Hoege,
-  J.~Gharakhani, F.~Julicher, and A.~A. Hyman.
-\newblock Germline p granules are liquid droplets that localize by controlled
-  dissolution/condensation.
-\newblock {\em Science}, 324(5935):1729--1732, May 2009.
-
-\bibitem{Buchan2009}
-J.~Ross Buchan and Roy Parker.
-\newblock Eukaryotic stress granules: The ins and outs of translation.
-\newblock {\em Molecular Cell}, 36(6):932--941, December 2009.
-
-\bibitem{Groot2019}
-Natalia~Sanchez de~Groot, Alexandros Armaos, Ricardo Gra{\~{n}}a-Montes, Marion
-  Alriquet, Giulia Calloni, R.~Martin Vabulas, and Gian~Gaetano Tartaglia.
-\newblock {RNA} structure drives interaction with proteins.
-\newblock {\em Nature Communications}, 10(1), July 2019.
-
-\bibitem{Drucker2015}
-Daniel Drucker.
-\newblock A comprehensive pythagorean theorem for all dimensions.
-\newblock {\em The American Mathematical Monthly}, 122(2):164, 2015.
-
-\bibitem{Ehrenberg1980}
-M.~Ehrenberg and C.~Blomberg.
-\newblock Thermodynamic constraints on kinetic proofreading in biosynthetic
-  pathways.
-\newblock {\em Biophysical Journal}, 31(3):333--358, September 1980.
-
-\bibitem{Gover2010}
-Eugene Gover and Nishan Krikorian.
-\newblock Determinants and the volumes of parallelotopes and zonotopes.
-\newblock {\em Linear Algebra and its Applications}, 433(1):28--40, July 2010.
-
-\bibitem{Hondele2019}
-Maria Hondele, Ruchika Sachdev, Stephanie Heinrich, Juan Wang, Pascal
-  Vallotton, Beatriz M.~A. Fontoura, and Karsten Weis.
-\newblock {DEAD}-box {ATPases} are global regulators of phase-separated
-  organelles.
-\newblock {\em Nature}, 573(7772):144--148, August 2019.
-
-\bibitem{Hopfield1974}
-J.~J. Hopfield.
-\newblock Kinetic proofreading: A new mechanism for reducing errors in
-  biosynthetic processes requiring high specificity.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  71(10):4135--4139, October 1974.
-
-\bibitem{McCann2011}
-C.~McCann, E.~E. Holohan, S.~Das, A.~Dervan, A.~Larkin, J.~A. Lee,
-  V.~Rodrigues, R.~Parker, and M.~Ramaswami.
-\newblock The ataxin-2 protein is required for {microRNA} function and
-  synapse-specific long-term olfactory habituation.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  108(36):E655--E662, July 2011.
-
-\bibitem{Mirzaev2013}
+\bibitem[Mirzaev and Gunawardena(2013)]{Mirzaev2013}
 Inomzhon Mirzaev and Jeremy Gunawardena.
 \newblock Laplacian dynamics on general graphs.
-\newblock {\em Bulletin of Mathematical Biology}, 75(11):2118--2149, September
-  2013.
+\newblock \emph{Bulletin of Mathematical Biology}, 75\penalty0 (11):\penalty0
+  2118--2149, September 2013.
+\newblock \doi{10.1007/s11538-013-9884-8}.
 
-\bibitem{Murugan2012}
-Arvind Murugan, David~A Huse, and Stanislas Leibler.
-\newblock Speed, dissipation, and error in kinetic proofreading.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  109(30):12034--12039, 2012.
+\bibitem[Drucker(2015)]{Drucker2015}
+Daniel Drucker.
+\newblock A comprehensive pythagorean theorem for all dimensions.
+\newblock \emph{The American Mathematical Monthly}, 122\penalty0 (2):\penalty0
+  164, 2015.
+\newblock \doi{10.4169/amer.math.monthly.122.02.164}.
 
-\bibitem{Murugan2014}
-Arvind Murugan, David~A Huse, and Stanislas Leibler.
-\newblock Discriminatory proofreading regimes in nonequilibrium systems.
-\newblock {\em Physical Review X}, 4(2):021016, 2014.
-
-\bibitem{Murugan2016}
-Arvind Murugan and Suriyanarayanan Vaikuntanathan.
-\newblock Biological implications of dynamical phases in non-equilibrium
-  networks.
-\newblock {\em Journal of Statistical Physics}, 162(5):1183--1202, February
-  2016.
-
-\bibitem{Murugan2014a}
-Arvind Murugan, Zorana Zeravcic, Michael~P. Brenner, and Stanislas Leibler.
-\newblock Multifarious assembly mixtures: Systems allowing retrieval of diverse
-  stored structures.
-\newblock {\em Proceedings of the National Academy of Sciences}, 112(1):54--59,
-  December 2014.
-
-\bibitem{Ninio1975}
-Jacques Ninio.
-\newblock Kinetic amplification of enzyme discrimination.
-\newblock {\em Biochimie}, 57(5):587--595, July 1975.
-
-\bibitem{Note1}
-Fully-connected graphs are ones in which it is possible to (not necessary
-  directly) get from every state to every other state.
-
-\bibitem{Note2}
-Throughout this text dissipation is calculated as the entropy production rate,
-  $\Delta S_i = \frac {1}{2}\sum _{i,j}(k_{ij}\rho _j-k_{ji}\rho _i)\ln {\frac
-  {k_{ij}\rho _j}{k_{ji}\rho _i}}$.
-
-\bibitem{Note3}
-An $N$-loop network will strictly speaking be composed of $2N+1$ loops, $N$ on
-  each side of the ladder and a single reactant node.
-
-\bibitem{Rao2015}
-Riccardo Rao and Luca Peliti.
-\newblock Thermodynamics of accuracy in kinetic proofreading: dissipation and
-  efficiency trade-offs.
-\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
-  (6):P06001, 20, 2015.
-
-\bibitem{Sartori2019}
-Pablo Sartori and Stanislas Leibler.
-\newblock Lessons from equilibrium statistical physics regarding the assembly
-  of protein complexes.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  117(1):114--120, December 2019.
-
-\bibitem{Sartori2013}
-Pablo Sartori and Simone Pigolotti.
-\newblock Kinetic versus energetic discrimination in biological copying.
-\newblock {\em Physical Review Letters}, 110(18), May 2013.
-
-\bibitem{Schnakenberg1976}
-J{\"u}rgen Schnakenberg.
-\newblock Network theory of microscopic and macroscopic behavior of master
-  equation systems.
-\newblock {\em Reviews of Modern physics}, 48(4):571, 1976.
-
-\bibitem{Wong2018}
-Felix Wong, Ariel Amir, and Jeremy Gunawardena.
-\newblock Energy-speed-accuracy relation in complex networks for biological
-  discrimination.
-\newblock {\em Physical Review E}, 98(1), July 2018.
+\bibitem[Gover and Krikorian(2010)]{Gover2010}
+Eugene Gover and Nishan Krikorian.
+\newblock Determinants and the volumes of parallelotopes and zonotopes.
+\newblock \emph{Linear Algebra and its Applications}, 433\penalty0
+  (1):\penalty0 28--40, July 2010.
+\newblock \doi{10.1016/j.laa.2010.01.031}.
 
 \end{thebibliography}
